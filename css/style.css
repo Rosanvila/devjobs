@@ -1,0 +1,233 @@
+@charset "UTF-8";
+:root {
+  /* Colors: */
+  --dark-grey: #6E8098;
+  --grey: #9DAEC2;
+  --light-grey: #F4F6F8;
+  --white: #FFFFFF;
+  --midnight: #121721;
+  --very-dark-blue: #19202D;
+  --light-violet: #939BF4;
+  --violet: #5964E0;
+  /* Font/text values */
+  --unnamed-font-family-kumbh-sans: Kumbh Sans;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-bold: bold;
+  --unnamed-font-weight-normal: normal;
+  --unnamed-font-size-14: 14px;
+  --unnamed-font-size-16: 16px;
+  --unnamed-font-size-20: 20px;
+  --unnamed-font-size-24: 24px;
+  --unnamed-font-size-28: 28px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-line-spacing-17: 17px;
+  --unnamed-line-spacing-24: 24px;
+  --unnamed-line-spacing-26: 26px;
+  --unnamed-line-spacing-29: 29px;
+  --unnamed-line-spacing-34: 34px;
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove focus for mouse users */
+/* TODO : améliorer pour les éléments de formulaire */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin */
+:is(body, h1, h2, h3, h4, p, figure, blockquote, dl, dd) {
+  margin: 0;
+}
+
+/* 2023-01-18 : Modified for CEFIM
+Remove list styles, margin and padding on ul, ol elements with a class, which suggests default styling will be removed */
+:is(ul, ol):where([class]) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+:is(h1, h2, h3, h4, button, input, label) {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+:is(h1, h2, h3, h4) {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Anything that has been anchored to should scroll and have extra scroll margin */
+:has(:target) {
+  scroll-behavior: smooth;
+  scroll-margin-block: 2.5em;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* CSS Debugger */
+* {
+  /* outline: 1px solid red; */
+}
+
+/* Identify images without alt attributes */
+img:not([alt]) {
+  border: 10px solid red !important;
+}
+
+/* Set cursor pointer */
+:where(label[for], button, input[type=submit], select):not(:disabled) {
+  cursor: pointer;
+}
+
+/* Remove font style on address */
+address {
+  font-style: normal;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* Print external URLs */
+@media print {
+  a[href]:not([href^="#"])::after {
+    content: "(" attr(href) ")";
+  }
+}
+/* Block scroll when burger menu indicates that menu is expanded */
+body:has(.toggle-menu[aria-expanded=true]) {
+  overflow-y: hidden;
+}
+
+:is(h1, h2, h3, h4) {
+  font-family: var(--unnamed-font-family-kumbh-sans);
+  font-weight: var(--unnamed-font-weight-bold);
+  color: var(--very-dark-blue);
+}
+
+body {
+  font-family: var(--unnamed-font-family-kumbh-sans);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-16);
+  line-height: var(--unnamed-line-spacing-26);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--very-dark-blue);
+}
+
+h1 {
+  font-style: var(--unnamed-font-style-normal);
+  font-size: var(--unnamed-font-size-28);
+  line-height: var(--unnamed-line-spacing-34);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+h2 {
+  font-style: var(--unnamed-font-style-normal);
+  font-size: var(--unnamed-font-size-24);
+  line-height: var(--unnamed-line-spacing-29);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+h3 {
+  font-style: var(--unnamed-font-style-normal);
+  font-size: var(--unnamed-font-size-20);
+  line-height: var(--unnamed-line-spacing-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+h4 {
+  font-style: var(--unnamed-font-style-normal);
+  font-size: var(--unnamed-font-size-14);
+  line-height: var(--unnamed-line-spacing-17);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+/*
+Exemples de suite des imports
+@import
+  'vendors/bootstrap',
+  'vendors/jquery-ui';
+
+@import
+  'layout/navigation',
+  'layout/grid',
+  'layout/header',
+  'layout/footer',
+  'layout/sidebar',
+  'layout/forms';
+
+@import
+  'components/buttons',
+  'components/carousel',
+  'components/cover',
+  'components/dropdown';
+
+@import
+  'pages/home',
+  'pages/contact';
+
+@import
+  'themes/theme',
+  'themes/admin';
+*/
+
+/*# sourceMappingURL=style.css.map */

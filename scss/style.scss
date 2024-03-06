@@ -1,0 +1,37 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'abstracts/functions' as *;
+
+@import
+	'base/reset',
+	'base/helpers',
+	'base/typography';
+
+/*
+Exemples de suite des imports
+@import
+  'vendors/bootstrap',
+  'vendors/jquery-ui';
+
+@import
+  'layout/navigation',
+  'layout/grid',
+  'layout/header',
+  'layout/footer',
+  'layout/sidebar',
+  'layout/forms';
+
+@import
+  'components/buttons',
+  'components/carousel',
+  'components/cover',
+  'components/dropdown';
+
+@import
+  'pages/home',
+  'pages/contact';
+
+@import
+  'themes/theme',
+  'themes/admin';
+*/
