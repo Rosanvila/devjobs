@@ -35,3 +35,8 @@ $breakpoints: (
 		@warn "Le breakpoint '#{$name}' n'existe pas. Les breakpoints disponibles sont : #{map-keys($breakpoints)}.";
 	}
 }
+
+@mixin center-flex-form {
+  display: flex;
+  align-items: center;
+}

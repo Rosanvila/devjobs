@@ -1,0 +1,12 @@
+.main-header {
+  background-image: url(/img/bg-pattern-header.svg);
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+}
+
+.devjobs-theme img {
+  width: 115px;
+}
+
+/*# sourceMappingURL=header.css.map */

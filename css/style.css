@@ -157,12 +157,22 @@ body:has(.toggle-menu[aria-expanded=true]) {
   overflow-y: hidden;
 }
 
-:is(h1, h2, h3, h4) {
-  font-family: var(--unnamed-font-family-kumbh-sans);
-  font-weight: var(--unnamed-font-weight-bold);
-  color: var(--very-dark-blue);
+/* kumbh-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/kumbh-sans-v22-latin-regular.woff2") format("woff2");
 }
-
+/* kumbh-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/kumbh-sans-v22-latin-700.woff2") format("woff2");
+}
 body {
   font-family: var(--unnamed-font-family-kumbh-sans);
   font-style: var(--unnamed-font-style-normal);
@@ -170,6 +180,12 @@ body {
   font-size: var(--unnamed-font-size-16);
   line-height: var(--unnamed-line-spacing-26);
   letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--very-dark-blue);
+}
+
+:is(h1, h2, h3, h4) {
+  font-family: var(--unnamed-font-family-kumbh-sans);
+  font-weight: var(--unnamed-font-weight-bold);
   color: var(--very-dark-blue);
 }
 
@@ -199,6 +215,49 @@ h4 {
   font-size: var(--unnamed-font-size-14);
   line-height: var(--unnamed-line-spacing-17);
   letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.main-header {
+  background-image: url(/img/bg-pattern-header.svg);
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+}
+
+.devjobs-theme img {
+  width: 115px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+.reseach-title::placeholder {
+  background-image: url(/img/icon-search.svg);
+  background-repeat: no-repeat;
+  padding-inline-start: 16px;
+}
+
+.reseach-title-content {
+  display: flex;
+  align-items: center;
+}
+
+.location-input::placeholder {
+  background-image: url(/img/icon-location.svg);
+  background-repeat: no-repeat;
+  padding-inline-start: 16px;
+}
+
+.research-form div {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.research-form input {
+  border: none;
 }
 
 /*
