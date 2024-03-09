@@ -1,10 +1,24 @@
-.main-header {
-background-image: url(/img/bg-pattern-header.svg);
-object-fit: cover;
-object-position: center;
-background-repeat: no-repeat;
+.container{
+  margin-inline: auto;
+  width: calc(100% - 1.5rem - 1.5rem);
 }
 
-.devjobs-theme img {
-  width: 115px;
+.main-header {
+background-image: url(/img/background_1.svg);
+background-repeat: no-repeat;
+height: 8.5rem;
+background-position: left -45px top;
+}
+
+.devjobs-theme{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block-start: 2.25rem;
+}
+.theme-toggle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
