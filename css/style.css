@@ -118,7 +118,7 @@ select {
 }
 /* CSS Debugger */
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 /* Identify images without alt attributes */
@@ -246,23 +246,13 @@ h4 {
 form {
   display: flex;
   align-items: center;
-}
-
-.reseach-title::placeholder {
-  background-image: url(/img/icon-search.svg);
-  background-repeat: no-repeat;
-  padding-inline-start: 16px;
+  justify-content: center;
 }
 
 .reseach-title-content {
   display: flex;
   align-items: center;
-}
-
-.location-input::placeholder {
-  background-image: url(/img/icon-location.svg);
-  background-repeat: no-repeat;
-  padding-inline-start: 16px;
+  justify-content: center;
 }
 
 .research-form div {

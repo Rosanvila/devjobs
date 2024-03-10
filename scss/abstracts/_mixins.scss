@@ -39,4 +39,5 @@ $breakpoints: (
 @mixin center-flex-form {
   display: flex;
   align-items: center;
+	justify-content: center;
 }

@@ -1,31 +1,21 @@
 form {
-  @include form;
-}
-
-.reseach-title::placeholder {
-  background-image: url(/img/icon-search.svg);
-  background-repeat: no-repeat;
-  padding-inline-start: 16px;
+  @include center-flex-form;
 }
 
 .reseach-title-content {
-display: flex;
+  @include center-flex-form
+  }
 
-}
+  .research-form div {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .research-form input{
+    border:  none;
+  }
+  
 
-.location-input::placeholder {
-  background-image: url(/img/icon-location.svg);
-  background-repeat: no-repeat;
-  padding-inline-start: 16px;
-}
 
-.research-form div {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.research-form input{
-  border:  none;
-}
 
