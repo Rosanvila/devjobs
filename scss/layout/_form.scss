@@ -1,0 +1,19 @@
+form {
+  @include center-flex-form;
+}
+
+.reseach-title-content {
+  @include center-flex-form;
+}
+
+.research-form div {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.research-form input {
+  border: none;
+}
+
+
