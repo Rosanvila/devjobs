@@ -4,16 +4,22 @@ form {
 
 .reseach-title-content {
   @include center-flex-form;
+
 }
 
 .research-form div {
   border: 1px solid black;
-  border-radius: 5px;
-  padding: 10px;
+  padding: 1.9375rem;
 }
 
 .research-form input {
   border: none;
 }
 
+.filter-location{
+  display: flex;
+}
 
+.full-time{
+  @include center-flex-form;
+}
