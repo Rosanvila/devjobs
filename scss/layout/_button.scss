@@ -1,9 +1,15 @@
 button{
-  width: 8.8125rem;
-  height: 3rem;
   border-radius: 5px;
   background-color: var(--violet);
   color: var(--white);
   font-weight: 700;
   text-align: center;
+  height: 3rem;
+  border: none;
+}
+
+
+.mobil-search-button{
+  width: 3rem;
+  height: 3rem;
 }

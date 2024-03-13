@@ -295,14 +295,7 @@ input:checked + .slider:before {
   background-color: var(--violet);
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .jobs-container {
-  max-width: 20.4375rem;
   padding-inline: 2rem;
   padding-block-end: 2rem;
   background-color: var(--white);
@@ -344,20 +337,18 @@ main {
 }
 
 form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  margin-block-start: -3.125rem;
+  background-color: var(--white);
+  border-radius: 0.375rem;
+  font-weight: 400;
 }
 
 .reseach-title-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.research-form div {
-  border: 1px solid black;
-  padding: 1.9375rem;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .research-form input {
@@ -366,22 +357,78 @@ form {
 
 .filter-location {
   display: flex;
+  border-bottom: 1px solid var(--dark-grey);
+  padding-block: 1.5rem;
+}
+
+.filter-location img {
+  padding-inline-end: 1rem;
+}
+
+.search-logo-large {
+  display: none;
 }
 
 .full-time {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.checkbox-content {
+  position: relative;
+  margin-block: 1.6875rem;
+}
+
+.checkbox-content label {
+  padding-inline-start: 1rem;
+}
+
+.form-checkbox {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  background-color: var(--light-grey);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.1875rem;
+}
+
+.form-checkbox:checked + .full-time-checkbox {
+  background-color: blue;
+}
+
+.full-time-checkbox:checked + .form-checkbox::before {
+  content: "✓";
+  color: red;
 }
 
 button {
-  width: 8.8125rem;
-  height: 3rem;
   border-radius: 5px;
   background-color: var(--violet);
   color: var(--white);
   font-weight: 700;
   text-align: center;
+  height: 3rem;
+  border: none;
+}
+
+.mobil-search-button {
+  width: 3rem;
+  height: 3rem;
+}
+
+.modal {
+  width: calc(100% - 1.5rem - 1.5rem);
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: gray;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  padding: 1.5rem;
 }
 
 /*
