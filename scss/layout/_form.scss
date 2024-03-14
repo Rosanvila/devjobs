@@ -1,6 +1,6 @@
 form {
   position: relative;
-  margin-block-start: -3.125rem;
+transform: translateY(-50%);
   background-color: var(--white);
   border-radius: .375rem;
   font-weight: 400
@@ -9,7 +9,6 @@ form {
 .reseach-title-content {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
   padding: 1rem
 }
 
