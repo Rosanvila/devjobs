@@ -1,4 +1,7 @@
-
+main{
+  display: flex;
+  flex-direction: column;
+}
 
 .jobs-container{
   padding-inline: 2rem;
@@ -34,10 +37,5 @@
 
 .job-location{
   margin-block-start: 2.75rem;
-}
-
-.load-more-button{
-  margin-block-start: 2rem;
-  margin-inline: 7.3125rem;
 }
 

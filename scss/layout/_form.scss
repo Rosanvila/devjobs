@@ -1,16 +1,22 @@
 form {
   position: relative;
-transform: translateY(-50%);
+  width: 100%;
+  transform: translateY(-50%);
   background-color: var(--white);
   border-radius: .375rem;
-  font-weight: 400
+  font-weight: 400;
+  padding: 1rem;
 }
 
 .reseach-title-content {
   display: flex;
-  justify-content: space-between;
-  padding: 1rem
 }
+
+.reseach-title{
+  width: 100%;
+}
+
+
 
 .research-form input {
   border: none;
