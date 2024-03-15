@@ -4,6 +4,8 @@ main{
 }
 
 .jobs-container{
+  position: relative;
+  z-index: -1;
   padding-inline: 2rem;
   padding-block-end: 2rem;
   background-color: var(--white);

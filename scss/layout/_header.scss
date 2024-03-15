@@ -16,10 +16,9 @@
   justify-content: space-between;
   padding-block-start: 2.25rem;
 }
-.theme-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.toggle-content{
+  @include center-flex;
   gap: 1rem;
 }
 

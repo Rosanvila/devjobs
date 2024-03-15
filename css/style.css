@@ -235,7 +235,7 @@ h4 {
   padding-block-start: 2.25rem;
 }
 
-.theme-toggle {
+.toggle-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,6 +301,8 @@ main {
 }
 
 .jobs-container {
+  position: relative;
+  z-index: -1;
   padding-inline: 2rem;
   padding-block-end: 2rem;
   background-color: var(--white);
@@ -337,6 +339,7 @@ main {
 }
 
 form {
+  display: flex;
   position: relative;
   width: 100%;
   transform: translateY(-50%);
@@ -346,22 +349,20 @@ form {
   padding: 1rem;
 }
 
-.reseach-title-content {
+label {
   display: flex;
-}
-
-.reseach-title {
   width: 100%;
 }
 
-.research-form input {
+input {
   border: none;
+  width: 100%;
 }
 
 .filter-location {
   display: flex;
-  border-bottom: 1px solid var(--dark-grey);
-  padding-block: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter-location img {
@@ -377,36 +378,10 @@ form {
   flex-direction: column;
 }
 
-.checkbox-content {
-  position: relative;
-  margin-block: 1.6875rem;
-}
-
-.checkbox-content label {
-  padding-inline-start: 1rem;
-}
-
-.form-checkbox {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  background-color: var(--light-grey);
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 0.1875rem;
-}
-
-.form-checkbox:checked + .full-time-checkbox {
-  background-color: blue;
-}
-
-.full-time-checkbox:checked + .form-checkbox::before {
-  content: "✓";
-  color: red;
-}
-
 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   background-color: var(--violet);
   color: var(--white);
@@ -416,12 +391,12 @@ button {
   border: none;
 }
 
-.mobil-search-button {
+.mobile-search-button {
   width: auto;
   padding: 16px;
 }
 
-.fitler-button {
+.filter-button {
   width: auto;
   padding: 16px;
   background-color: var(--white);
@@ -434,16 +409,98 @@ button {
 
 .modal {
   visibility: hidden;
-  width: calc(100% - 1.5rem - 1.5rem);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
   position: fixed;
-  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: gray;
+  background-color: rgb(226, 226, 226);
   border-radius: 0.375rem;
   overflow: hidden;
+  margin-block-start: 14.0625rem;
   padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+.full-time {
+  display: flex;
+  flex-direction: row;
+  margin-block-start: 1.8125rem;
+}
+
+/* Customize the label (the container) */
+.full-time {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Hide the browser's default checkbox */
+.full-time input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.modal::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  display: block;
+  border-bottom: 1px solid var(--light-grey);
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: -25%;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.1875rem;
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.full-time input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.full-time input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.full-time .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
 /*

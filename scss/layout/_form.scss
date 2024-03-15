@@ -1,4 +1,5 @@
 form {
+  display: flex;
   position: relative;
   width: 100%;
   transform: translateY(-50%);
@@ -8,26 +9,22 @@ form {
   padding: 1rem;
 }
 
-.reseach-title-content {
+label{
   display: flex;
-}
-
-.reseach-title{
   width: 100%;
 }
 
-
-
-.research-form input {
+input {
   border: none;
+  width: 100%
 }
 
 .filter-location{
-  display: flex;
-  border-bottom: 1px solid var(--dark-grey);
-  padding-block: 1.5rem;
-
+  @include center-flex;
 }
+
+
+
 
 .filter-location img {
   padding-inline-end: 1rem;
@@ -42,32 +39,7 @@ form {
   flex-direction: column;
 }
 
-.checkbox-content{
-  position: relative;
-  margin-block: 1.6875rem;
-}
-
-.checkbox-content label{
-  padding-inline-start: 1rem;
-}
 
 
-.form-checkbox{
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  background-color: var(--light-grey);
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: .1875rem;
-}
 
-.form-checkbox:checked + .full-time-checkbox {
-  background-color: blue; 
-}
 
-.full-time-checkbox:checked + .form-checkbox::before {
-  content: '\2713'; 
-  color: red; 
-}

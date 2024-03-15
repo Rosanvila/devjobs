@@ -1,4 +1,5 @@
 button{
+  @include center-flex;
   border-radius: 5px;
   background-color: var(--violet);
   color: var(--white);
@@ -9,12 +10,12 @@ button{
 }
 
 
-.mobil-search-button{
+.mobile-search-button{
   width: auto;
   padding: 16px;
 }
 
-.fitler-button{
+.filter-button{
   width: auto;
   padding: 16px;
   background-color: var(--white);
