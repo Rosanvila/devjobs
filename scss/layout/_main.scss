@@ -1,4 +1,4 @@
-main{
+.main-content{
   display: flex;
   flex-direction: column;
 }
@@ -8,7 +8,7 @@ main{
   z-index: -1;
   padding-inline: 2rem;
   padding-block-end: 2rem;
-  background-color: var(--white);
+  background-color: $white;
   border-radius: .375rem;
 }
 

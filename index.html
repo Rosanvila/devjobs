@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Board</title>
   <meta name="description" content="Job Board ECF front Robin">
-
-  <!-- <meta property="og:title" content="ECF Front Robin">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content=""> -->
-
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="./img/favicon-32x32.png">
 
@@ -23,6 +17,7 @@
 </div>
 
 <body>
+  <div class="overlay"></div>
   <header class="main-header">
     <div class="container">
       <div class="devjobs-theme">
@@ -54,34 +49,42 @@
   <main class="main-content">
     <section class="form" id="form">
       <div class="container form-container">
-        <form action="/votre-page-de-traitement.php" class="research-form" id="research-form" role="form" aria-label="research-jobs-form">
-          <label id="reseach-title" class="reseach-title" for="text">
-            <img class="search-logo-large" src="/img/icon-search.svg" alt="">
-            <input type="search" name="reseach-title" id="text" placeholder="Filter by title...">
-            <button class="filter-button">
-              <img src="img/icon-filter.svg" alt="Filter" id="filter" class="filter-logo">
-            </button>
-            <button class="mobile-search-button" type="button">
-              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path fill="#ffffff" d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z" />
-              </svg>
-            </button>
-          </label>
-          <div class="modal" id="modal">
-            <label id="location-label" class="filter-location" for="location-input">
-              <img src="/img/icon-location.svg"  alt="">
-              <input type="search" name="location" class="location-input" id="location-input" placeholder="Filter by location...">
+        <form action="/votre-page-de-traitement.php" class="research-form" id="research-form" role="form"
+          aria-label="research-jobs-form">
+          <div class="research-content">
+            <label id="reseach-title" class="reseach-title" for="text">
+              <img class="search-logo-large" src="/img/icon-search.svg" alt="">
+              <input type="search" name="reseach-title" id="text" placeholder="Filter by title...">
+              <button type="button" class="filter-button" id="filter-button">
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path fill="#6E8098"
+                    d="M19.108 0H.86a.86.86 0 0 0-.764.455.833.833 0 0 0 .068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 0 0 .248.594.865.865 0 0 0 .942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0 0 19.108 0z" />
+                </svg>
+              </button>
+              <button class="mobile-search-button" type="button">
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path fill="#ffffff"
+                    d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z" />
+                </svg>
+              </button>
             </label>
-            <label class="full-time" for="full-time">
-              <input type="checkbox" id="full-time">
-              <span class="checkmark"></span>
-              Full time only
-            </label>
-            <button type="submit">Search</button>
           </div>
+            <div class="container modal" id="modal">
+              <label id="location-label" class="filter-location" for="location-input">
+                <img src="/img/icon-location.svg" alt="">
+                <input type="search" name="location" class="location-input" id="location-input"
+                  placeholder="Filter by location...">
+              </label>
+              <label class="full-time" for="full-time">
+                <input type="checkbox" id="full-time">
+                <span class="checkmark"></span>
+                Full time only
+              </label>
+              <button type="submit">Search</button>
+            </div>
         </form>
-        
     </section>
+
 
     <section class="jobs" id="jobs">
       <div class="container jobs-container">
@@ -314,7 +317,6 @@
 
     <button type="button" role="button" aria-label="button" id="load-more-button" class="load-more-button">Load
       More</button>
-
   </main>
   <script src="js/api.js"></script>
   <script src="js/dom.js"></script>

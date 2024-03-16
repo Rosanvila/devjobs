@@ -57,20 +57,20 @@
   border-radius: 20px;
   left: 0.27em;
   bottom: 0.25em;
-  background-color: var(--violet);
+  background-color: $violet;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: var(--white);
-  border: 1px solid var(--white);
+  background-color: $white;
+  border: 1px solid $white;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px var(--violet);
+  box-shadow: 0 0 1px $violet;
 }
 
 input:checked + .slider:before {
   transform: translateX(1.4em);
-  background-color: var(--violet);
+  background-color: $violet;
 }

@@ -1,8 +1,8 @@
 button{
   @include center-flex;
   border-radius: 5px;
-  background-color: var(--violet);
-  color: var(--white);
+  background-color: $violet;
+  color: $white;
   font-weight: 700;
   text-align: center;
   height: 3rem;
@@ -18,7 +18,7 @@ button{
 .filter-button{
   width: auto;
   padding: 16px;
-  background-color: var(--white);
+  background-color: $white;
 }
 
 .load-more-button{

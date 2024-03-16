@@ -1,9 +1,12 @@
-form {
-  display: flex;
+form{
   position: relative;
+}
+
+.research-content {
+  display: flex;
   width: 100%;
   transform: translateY(-50%);
-  background-color: var(--white);
+  background-color: $white;
   border-radius: .375rem;
   font-weight: 400;
   padding: 1rem;

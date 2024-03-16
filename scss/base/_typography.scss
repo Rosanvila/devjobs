@@ -16,47 +16,47 @@
 }
 
 body {
-  font-family: var(--unnamed-font-family-kumbh-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-normal);
-  font-size: var(--unnamed-font-size-16);
-  line-height: var(--unnamed-line-spacing-26);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--very-dark-blue);
-  background-color: var(--light-grey);
+  font-family: $unnamed-font-family-kumbh-sans;
+  font-style: $unnamed-font-style-normal;
+  font-weight: $unnamed-font-weight-normal;
+  font-size: $unnamed-font-size-16;
+  line-height: $unnamed-line-spacing-26;
+  letter-spacing: $unnamed-character-spacing-0;
+  color: $very-dark-blue;
+  background-color: $light-grey;
 }
 
 :is(h1, h2, h3, h4) {
-  font-family: var(--unnamed-font-family-kumbh-sans);
-  font-weight: var(--unnamed-font-weight-bold);
-  color: var(--very-dark-blue);
+  font-family: $unnamed-font-family-kumbh-sans;
+  font-weight: $unnamed-font-weight-bold;
+  color: $very-dark-blue;
 }  
 
 
     h1 {
-    font-style: var(--unnamed-font-style-normal);
-    font-size: var(--unnamed-font-size-28);
-    line-height: var(--unnamed-line-spacing-34);
-    letter-spacing: var(--unnamed-character-spacing-0);
+    font-style: $unnamed-font-style-normal;
+    font-size: $unnamed-font-size-28;
+    line-height: $unnamed-line-spacing-34;
+    letter-spacing: $unnamed-character-spacing-0;
     }
 
     h2 {
-    font-style: var(--unnamed-font-style-normal);
-    font-size: var(--unnamed-font-size-24);
-    line-height: var(--unnamed-line-spacing-29);
-    letter-spacing: var(--unnamed-character-spacing-0);
+    font-style: $unnamed-font-style-normal;
+    font-size: $unnamed-font-size-24;
+    line-height: $unnamed-line-spacing-29;
+    letter-spacing: $unnamed-character-spacing-0;
     }
 
     h3 {
-    font-style: var(--unnamed-font-style-normal);
-    font-size: var(--unnamed-font-size-20);
-    line-height: var(--unnamed-line-spacing-24);
-    letter-spacing: var(--unnamed-character-spacing-0);
+    font-style: $unnamed-font-style-normal;
+    font-size: $unnamed-font-size-20;
+    line-height: $unnamed-line-spacing-24;
+    letter-spacing: $unnamed-character-spacing-0;
     }
 
     h4 {
-    font-style: var(--unnamed-font-style-normal);
-    font-size: var(--unnamed-font-size-14);
-    line-height: var(--unnamed-line-spacing-17);
-    letter-spacing: var(--unnamed-character-spacing-0);
+    font-style: $unnamed-font-style-normal;
+    font-size: $unnamed-font-size-14;
+    line-height: $unnamed-line-spacing-17;
+    letter-spacing: $unnamed-character-spacing-0;
     }
