@@ -1,16 +1,14 @@
 .modal {
-  position: absolute;
+  position: fixed;
   visibility: hidden;
   display: flex;
   flex-direction: column;
-  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $white;
   border-radius: 0.375rem;
   overflow: hidden;
-  margin-block-start: 11rem;
   padding: 1.5rem;
   gap: 1.5rem;
   z-index: 10;
@@ -34,27 +32,13 @@
 
 .overlay-open{
   display: block;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, .5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.full-time {
-  display: flex;
-  flex-direction: row;
-  margin-block-start: 1.8125rem;
 }
 
 /* Customize the label (the container) */
 .full-time {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 35px; 
   cursor: pointer;
   font-size: 22px;
   user-select: none;
@@ -74,12 +58,11 @@
 .modal::after {
   content: "";
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 0;
   display: block;
-  border-bottom: 1px solid var(--light-grey);
+  border-bottom: 1px solid $dark-grey;
   width: 100%;
-  margin-top: 5px;
 }
 
 /* Create a custom checkbox */

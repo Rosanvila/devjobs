@@ -312,91 +312,17 @@ input:checked + .slider:before {
   margin-block-start: 2.75rem;
 }
 
-form {
-  position: relative;
-}
-
-.research-content {
-  display: flex;
-  width: 100%;
-  transform: translateY(-50%);
-  background-color: #ffffff;
-  border-radius: 0.375rem;
-  font-weight: 400;
-  padding: 1rem;
-}
-
-label {
-  display: flex;
-  width: 100%;
-}
-
-input {
-  border: none;
-  width: 100%;
-}
-
-.filter-location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.filter-location img {
-  padding-inline-end: 1rem;
-}
-
-.search-logo-large {
-  display: none;
-}
-
-.full-time {
-  display: flex;
-  flex-direction: column;
-}
-
-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  background-color: #5964e0;
-  color: #ffffff;
-  font-weight: 700;
-  text-align: center;
-  height: 3rem;
-  border: none;
-}
-
-.mobile-search-button {
-  width: auto;
-  padding: 16px;
-}
-
-.filter-button {
-  width: auto;
-  padding: 16px;
-  background-color: #ffffff;
-}
-
-.load-more-button {
-  margin: 2rem auto;
-  padding: 0.5rem;
-}
-
 .modal {
-  position: absolute;
+  position: fixed;
   visibility: hidden;
   display: flex;
   flex-direction: column;
-  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   border-radius: 0.375rem;
   overflow: hidden;
-  margin-block-start: 11rem;
   padding: 1.5rem;
   gap: 1.5rem;
   z-index: 10;
@@ -420,19 +346,6 @@ button {
 
 .overlay-open {
   display: block;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.full-time {
-  display: flex;
-  flex-direction: row;
-  margin-block-start: 1.8125rem;
 }
 
 /* Customize the label (the container) */
@@ -440,7 +353,6 @@ button {
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
   user-select: none;
@@ -460,12 +372,11 @@ button {
 .modal::after {
   content: "";
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 0;
   display: block;
-  border-bottom: 1px solid var(--light-grey);
+  border-bottom: 1px solid #6e8098;
   width: 100%;
-  margin-top: 5px;
 }
 
 /* Create a custom checkbox */
@@ -507,6 +418,114 @@ button {
   transform: rotate(45deg);
 }
 
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #5964e0;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  height: 3rem;
+  border: none;
+}
+
+.mobile-search-button {
+  width: auto;
+  padding: 1rem;
+}
+
+.filter-button {
+  width: auto;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.load-more-button {
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+form {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 0.375rem;
+  font-weight: 400;
+  padding: 1rem;
+  width: 100%;
+  margin-block-start: -2.5rem;
+}
+
+label {
+  display: flex;
+  width: 100%;
+}
+
+input {
+  border: none;
+  width: 100%;
+}
+
+.filter-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 1.5rem;
+}
+
+.filter-location img {
+  margin-inline-end: 1rem;
+}
+
+.search-logo-large {
+  display: none;
+}
+
+.full-time {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 48em) {
+  .modal {
+    position: initial;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: none;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    z-index: 10;
+    padding: 0;
+    gap: 0;
+  }
+  .filter-location {
+    margin-block-end: 0;
+  }
+  .modal::after {
+    display: none;
+  }
+  form {
+    display: flex;
+    align-items: center;
+  }
+  .filter-button {
+    display: none;
+  }
+  .mobile-search-button {
+    display: none;
+  }
+  .search-logo-large {
+    display: block;
+    padding-inline-end: 1rem;
+  }
+}
 .main-details-content {
   display: flex;
   flex-direction: column;
