@@ -1,27 +1,32 @@
+.jobs{
+  background-color: $light-grey;
+}
+
 .main-content{
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
 
 .jobs-container{
-  position: relative;
-  z-index: -1;
-  padding-inline: 2rem;
+  display: grid;
+  row-gap: 3.0625rem;
   padding-block-end: 2rem;
   background-color: $white;
   border-radius: .375rem;
+  margin-block-start: 3.5625rem;
+  background-color: $light-grey;
 }
 
 .job-card{
   display: flex;
   flex-direction: column;
-  margin-block-start: 3.5625rem;
+  padding: 0 .5625rem 2rem 2rem;
   border-radius: .375rem;
+  background-color: $white;
 }
 
 .job-logo{
   display: flex;
-  transform: translateY(-1.5625rem);
+  transform: translateY(-50%);
   width: 3.125rem;
   height: 3.125rem;
   background-color: orange;
@@ -33,11 +38,21 @@
   gap: 1rem;
 }
 
-.job-title h3{
+.job-title{
   margin-block: .75rem;
+  text-decoration: none;
 }
 
 .job-location{
   margin-block-start: 2.75rem;
 }
 
+@include mq(md){
+  .jobs-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 4.0625rem;
+    column-gap: .6875rem;
+  }
+}

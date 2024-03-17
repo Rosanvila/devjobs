@@ -1,4 +1,4 @@
-const filterBtn = document.querySelector("#filter-button");
+const filterBtn = document.querySelector(".filter-button");
 const mobileModal = document.querySelector("#modal");
 const overlay = document.querySelector(".overlay");
 
