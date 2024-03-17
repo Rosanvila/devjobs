@@ -125,4 +125,10 @@
   .checkmark {
     top: 0;
   }
+
+  @include mq(xl){
+    .filter-location::after{
+      left: 67%;
+    }
+  }
 }
