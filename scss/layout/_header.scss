@@ -1,13 +1,13 @@
 .container {
   margin-inline: auto;
-  width: calc(100% - 1.5rem - 1.5rem);
+  width: clamp(20.438rem, 3.206rem + 73.521vw, 69.375rem);
 }
 
 .main-header {
   background-image: url(/img/background_1.svg);
+  height: 10rem;
   background-repeat: no-repeat;
-  height: 8.5rem;
-  background-position: left -45px top;
+  background-position: left -6rem top;
 }
 
 .devjobs-theme {
@@ -17,7 +17,7 @@
   padding-block-start: 2.25rem;
 }
 
-.toggle-content{
+.toggle-content {
   @include center-flex;
   gap: 1rem;
 }
@@ -73,4 +73,11 @@ input:focus + .slider {
 input:checked + .slider:before {
   transform: translateX(1.4em);
   background-color: $violet;
+}
+
+@include mq(md) {
+  .main-header {
+    background-position: 0;
+    height: 10rem;
+  }
 }

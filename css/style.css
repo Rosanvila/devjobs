@@ -192,14 +192,14 @@ h4 {
 
 .container {
   margin-inline: auto;
-  width: calc(100% - 1.5rem - 1.5rem);
+  width: clamp(20.438rem, 3.206rem + 73.521vw, 69.375rem);
 }
 
 .main-header {
   background-image: url(/img/background_1.svg);
+  height: 10rem;
   background-repeat: no-repeat;
-  height: 8.5rem;
-  background-position: left -45px top;
+  background-position: left -6rem top;
 }
 
 .devjobs-theme {
@@ -269,6 +269,12 @@ input:checked + .slider:before {
   background-color: #5964e0;
 }
 
+@media screen and (min-width: 48em) {
+  .main-header {
+    background-position: 0;
+    height: 10rem;
+  }
+}
 .main-content {
   display: flex;
   flex-direction: column;
@@ -323,7 +329,7 @@ input:checked + .slider:before {
   background-color: #ffffff;
   border-radius: 0.375rem;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 1rem;
   gap: 1.5rem;
   z-index: 10;
 }
@@ -348,7 +354,16 @@ input:checked + .slider:before {
   display: block;
 }
 
-/* Customize the label (the container) */
+.filter-location::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 0;
+  display: block;
+  border-bottom: 1px solid #6e8098;
+  width: 100%;
+}
+
 .full-time {
   display: block;
   position: relative;
@@ -360,7 +375,6 @@ input:checked + .slider:before {
   font-weight: 700;
 }
 
-/* Hide the browser's default checkbox */
 .full-time input {
   position: absolute;
   opacity: 0;
@@ -369,17 +383,6 @@ input:checked + .slider:before {
   width: 0;
 }
 
-.modal::after {
-  content: "";
-  position: absolute;
-  top: 35%;
-  left: 0;
-  display: block;
-  border-bottom: 1px solid #6e8098;
-  width: 100%;
-}
-
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: -25%;
@@ -390,24 +393,20 @@ input:checked + .slider:before {
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
 .full-time input:checked ~ .checkmark {
   background-color: #2196f3;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .full-time input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .full-time .checkmark:after {
   left: 9px;
   top: 5px;
@@ -418,6 +417,23 @@ input:checked + .slider:before {
   transform: rotate(45deg);
 }
 
+@media screen and (min-width: 48em) {
+  .filter-location::after {
+    display: none;
+  }
+  .modal {
+    position: initial;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transform: none;
+    width: 100%;
+    border-radius: 0.375rem;
+    gap: 0;
+  }
+}
 button {
   display: flex;
   align-items: center;
@@ -429,22 +445,20 @@ button {
   text-align: center;
   height: 3rem;
   border: none;
+  padding: 1rem;
 }
 
 .mobile-search-button {
   width: auto;
-  padding: 1rem;
 }
 
 .filter-button {
   width: auto;
-  padding: 16px;
   background-color: #ffffff;
 }
 
 .load-more-button {
   margin: 2rem auto;
-  padding: 0.5rem;
 }
 
 form {
@@ -452,18 +466,22 @@ form {
   background-color: #ffffff;
   border-radius: 0.375rem;
   font-weight: 400;
-  padding: 1rem;
   width: 100%;
   margin-block-start: -2.5rem;
 }
 
-label {
-  display: flex;
+form input {
+  border: none;
   width: 100%;
 }
 
-input {
-  border: none;
+.research-content {
+  display: flex;
+  padding: 1rem;
+}
+
+.reseach-title {
+  display: flex;
   width: 100%;
 }
 
@@ -482,38 +500,12 @@ input {
   display: none;
 }
 
-.full-time {
-  display: flex;
-  flex-direction: column;
-}
-
 @media screen and (min-width: 48em) {
-  .modal {
-    position: initial;
-    visibility: visible;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transform: none;
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 0.375rem;
-    overflow: hidden;
-    padding: 1.5rem;
-    gap: 1.5rem;
-    z-index: 10;
-    padding: 0;
-    gap: 0;
-  }
   .filter-location {
     margin-block-end: 0;
   }
-  .modal::after {
-    display: none;
-  }
   form {
     display: flex;
-    align-items: center;
   }
   .filter-button {
     display: none;
@@ -524,6 +516,12 @@ input {
   .search-logo-large {
     display: block;
     padding-inline-end: 1rem;
+  }
+  label {
+    padding-inline-end: 1rem;
+  }
+  .research-content {
+    border-right: 2px solid #f4f6f8;
   }
 }
 .main-details-content {
