@@ -3,6 +3,10 @@
   width: clamp(20.438rem, 3.206rem + 73.521vw, 69.375rem);
 }
 
+h1{
+  display: none;
+}
+
 .main-header {
   background-image: url(/img/background_1.svg);
   height: 10rem;
