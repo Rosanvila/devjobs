@@ -482,7 +482,6 @@ button {
   color: #ffffff;
   font-weight: 700;
   text-align: center;
-  height: 3rem;
   border: none;
   padding: 1rem;
 }
@@ -542,6 +541,9 @@ button {
 @media screen and (min-width: 48em) {
   form {
     display: flex;
+  }
+  .filter-location {
+    margin-block-end: 0;
   }
   .filter-button {
     display: none;

@@ -8,16 +8,13 @@
   <meta name="description" content="Job Board ECF front Robin">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="./img/favicon-32x32.png">
-
 </head>
 
-<div class="skip-links">
-  <a href="#resarch-form">Skip to form</a>
-  <a href="#jobs-content">Skip to jobs content</a>
-</div>
-
 <body>
-  <div class="overlay"></div>
+  <div class="skip-links">
+    <a href="#resarch-form">Skip to form</a>
+    <a href="#jobs-content">Skip to jobs content</a>
+  </div>
   <header class="main-header">
     <div class="container">
       <div class="devjobs-theme">
@@ -33,8 +30,7 @@
           <label for="switch-theme-toggle" class="switch">
             <input type="checkbox" name="toggle-switch" id="switch-theme-toggle" class="toggle" role="switch"
               aria-label="toggle-switch">
-            <span class="slider" aria-hidden="true">
-            </span>
+            <span class="slider" aria-hidden="true"></span>
           </label>
           <svg width="12" role="img" aria-label="dark theme" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
             <path fill="#FFF"
@@ -44,29 +40,29 @@
       </div>
     </div>
   </header>
-
   <main class="main-content">
     <section class="form" id="form">
       <div class="container form-container">
         <form action="/votre-page-de-traitement.php" class="research-form" id="research-form"
           aria-label="research-jobs-form">
           <div class="research-content">
-            <label id="reseach-title" class="reseach-title" for="text">
-              <img class="search-logo-large" src="/img/icon-search.svg" alt="">
-              <input type="search" name="reseach-title" id="text" placeholder="Filter by title, companies, expertise...">
-              <button id="text" type="button" class="filter-button">
-                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  <path fill="#6E8098"
-                    d="M19.108 0H.86a.86.86 0 0 0-.764.455.833.833 0 0 0 .068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 0 0 .248.594.865.865 0 0 0 .942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0 0 19.108 0z" />
-                </svg>
-              </button>
-              <button class="mobile-search-button" type="button">
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path fill="#ffffff"
-                    d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z" />
-                </svg>
-              </button>
+            <img class="search-logo-large" src="/img/icon-search.svg" alt="">
+            <label id="reseach-title" class="reseach-title" for="by-title">
+              <input type="search" name="reseach-title" id="by-title"
+                placeholder="Filter by title, companies, expertise...">
             </label>
+            <button type="button" id="filter-by-title-button" class="filter-button" aria-label="Filter">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path fill="#6E8098"
+                  d="M19.108 0H.86a.86.86 0 0 0-.764.455.833.833 0 0 0 .068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 0 0 .248.594.865.865 0 0 0 .942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0 0 19.108 0z" />
+              </svg>
+            </button>
+            <button class="mobile-search-button" type="button">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="#ffffff"
+                  d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z" />
+              </svg>
+            </button>
           </div>
           <div class="container modal" id="modal">
             <label id="location-label" class="filter-location" for="location-input">
@@ -90,7 +86,7 @@
       <div class="container jobs-container">
         <article class="job-card" id="job-card" aria-label="job-card" role="article">
           <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
+            <img src="./img/scoot.svg" alt="">
           </div>
           <div id="jod-description" class="job-description">
             <p>5h ago</p>
@@ -103,171 +99,7 @@
           <p>Scoot</p>
           <h4 class="job-location">United Kingdom</h4>
         </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
-        <article class="job-card" id="job-card" aria-label="job-card" role="article">
-          <div class="job-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" role="img">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p>5h</p>
-            <span>&#183;</span>
-            <p>Full Time</p>
-          </div>
-          <a href="link" class="job-title" id="job-title" role="link">
-            <h3>Senior Software Engineer</h3>
-          </a>
-          <p>Scoot</p>
-          <h4 class="job-location">United Kingdom</h4>
-        </article>
+
       </div>
     </section>
 
