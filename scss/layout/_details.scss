@@ -1,4 +1,36 @@
-.main-details-content{
-  display: flex;
-  flex-direction: column;
+.job-details-card {
+  display: grid;
+  justify-items: center;
+  border-radius: 0.375rem;
+  padding-block-end: 2rem;
+  background-color: $white;
+  transform: translateY(-10%);
+}
+
+.job-site{
+  text-align: center;
+}
+
+.website-id{
+  margin-block-end: 22px;
+}
+
+.details-container{
+  background-color: $white;
+  border-radius: 0.375rem;
+  padding: 2.5625rem 1.5625rem;
+}
+
+.details-times{
+display: flex;
+gap: .875rem;
+}
+
+.location{
+  color: $violet;
+  font-weight: bold;
+}
+
+.job-apply{
+  margin-block-end: 3.125rem;
 }

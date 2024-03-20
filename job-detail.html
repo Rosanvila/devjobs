@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="shortcut icon" href="./img/favicon-32x32.png">
   <title>Job Board</title>
 </head>
+
 <body>
   <header class="main-header">
     <div class="container">
@@ -22,12 +24,10 @@
           </svg>
           <label for="switch-theme-toggle" class="switch">
             <input type="checkbox" name="toggle-switch" id="switch-theme-toggle" class="toggle" role="switch"
-              aria-checked="true" aria-label="toggle-switch">
-            <span class="slider" aria-hidden="true">
-            </span>
+              aria-label="toggle-switch">
+            <span class="slider" aria-hidden="true"></span>
           </label>
-          <svg width="12" heigth="12" role="img" aria-label="dark theme" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 12 12">
+          <svg width="12" role="img" aria-label="dark theme" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
             <path fill="#FFF"
               d="M6 0c1.516 0 2.925.566 3.978 1.523A3.979 3.979 0 0 0 8 1a4.014 4.014 0 0 0-2.821 1.179A3.927 3.927 0 0 0 4 5c0 1.095.463 2.105 1.179 2.821A3.927 3.927 0 0 0 8 9a4.034 4.034 0 0 0 3.974-3.548c.017.18.026.364.026.548a6.02 6.02 0 0 1-1.768 4.232A6.02 6.02 0 0 1 6 12a5.89 5.89 0 0 1-4.232-1.768A6.02 6.02 0 0 1 0 6a5.89 5.89 0 0 1 1.768-4.232A6.02 6.02 0 0 1 6 0z" />
           </svg>
@@ -36,26 +36,96 @@
     </div>
   </header>
 
-  <main class="main-details-content">
-  <section class="jobs-details" id="jobs-details">
-    <div class="container jobs-container">
-      <div class="job-card" id="job-card" aria-label="job-card" role="article">
-        <div class="job-logo" id="job-logo">
-          <img src="./img/scoot.svg" alt="" role="img">
+  <main>
+    <section class="jobs" id="jobs">
+      <h1>jobs details</h1>
+      <div class="container jobs-details-container">
+        <div class="job-details-card" id="job-card" aria-label="job-card">
+          <div class="job-logo" id="job-logo">
+            <img src="./img/scoot.svg" alt="" id="logo">
+          </div>
+          <div class="job-site">
+            <h2 class="h1" id="company">Scoot</h2>
+            <p class="website-id" id="website-id">scoot.com</p>
+            <a class="anchor-button-2" href="company-site" id="company-website">company site
+            </a>
+          </div>
         </div>
-        <div id="jod-description" class="job-description">
-          <p>5h</p>
-          <span>&#183;</span>
-          <p>Full Time</p>
-        </div>
-        <a href="link" class="job-title" id="job-title" role="link">
-          <h3>Senior Software Engineer</h3>
-        </a>
-        <p>Scoot</p>
-        <h4 class="job-location">United Kingdom</h4>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+
+    <section class="jobs" id="details">
+      <div class="container details-container">
+        <div id="jod-apply" class="job-apply">
+          <div
+          class="details-times">
+            <p id="postedAt">5h ago</p>
+            <span>&#183;</span>
+            <p id="contract">Full Time</p>
+          </div>
+          <h2 class="h2" id="position">senior software engineer</h2>
+          <p class="location" id="location">United kingdom</p>
+        </div>
+        <a class="anchor-button" id="apply" href="apply">apply now</a>
+        <div class="job-details" id="job-details">
+          <p class="description" id="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi laborum at nostrum ducimus ipsum deserunt
+            magni accusamus expedita saepe, inventore, omnis nam veritatis ad blanditiis atque fuga excepturi? Aperiam
+            esse dolorum quo cumque laboriosam consectetur! Incidunt, impedit? Neque est molestias numquam vero commodi
+            explicabo excepturi quam obcaecati accusamus sint voluptas ut illum consequuntur, saepe, placeat, dolor
+            perferendis ullam minus. Quis quod ex repellat adipisci unde magni repudiandae corporis reprehenderit error
+            beatae! Sed maiores nam at architecto atque fuga. Molestiae consectetur laboriosam, mollitia soluta nobis
+            nisi optio assumenda ex ducimus dolore ad eveniet exercitationem earum repellendus expedita quisquam
+            officiis ut explicabo.
+          </p>
+          <div class="description">
+            <h2 class="h2">Requirements</h2>
+            <div>
+              <p id="req-content" class="req-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint nemo voluptatem
+                mollitia debitis. Maxime cupiditate eos laborum nisi rem velit cum ullam quo totam ab. Maxime,
+                distinctio voluptatibus non optio qui odio totam porro sequi possimus eos? Quibusdam asperiores,
+                incidunt sint dignissimos illum voluptatem non, assumenda dolore deserunt cumque, a eos fugit quo.
+                Adipisci eos corrupti animi fugit dolorum debitis, culpa veritatis nesciunt. Suscipit alias quia
+                aspernatur iste dicta corrupti dolor veritatis eveniet magni vitae, quibusdam distinctio, nemo maiores?
+              </p>
+              <ul>
+                <li id="req-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li id="req-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti quis nam?</li>
+                <li id="req-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
+                <li id="req-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque architecto distinctio aliquid officia?</li>
+              </ul>
+            </div>
+            <h2 class="h2">what you will do</h2>
+            <div>
+              <p id="do-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, recusandae culpa nobis
+                nulla dicta quod error fuga. Officia, dolor beatae at fugit quasi doloremque non, placeat ipsum aliquid
+                consectetur optio, ipsa ipsam sequi quos aut suscipit ab enim et molestiae repellat ullam quo doloribus
+                soluta impedit! Aliquam repudiandae commodi, veniam sequi sunt iure esse suscipit nobis cupiditate. Qui,
+                est ducimus.
+              </p>
+              <ol>
+                <li id="do-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
+                <li id="do-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
+                <li id="do-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
+                <li id="do-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="job-card" id="footer-job-card" aria-label="job-card">
+        <div class="job-site">
+          <h2 class="h1" id="footer-position">senior software engineer</h2>
+          <p id="footer-company">scoot</p>
+          <a class="anchor-button" id="footer-company-website">company site</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
 </body>
+
 </html>

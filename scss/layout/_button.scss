@@ -9,6 +9,32 @@ button{
   padding: 1rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+.anchor-button {
+  @include center-flex;
+  border-radius: 5px;
+  background-color: $violet;
+  color: $white;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  padding-block: .75rem;
+}
+
+.anchor-button-2{
+  @include center-flex;
+  border-radius: 5px;
+  background-color: $violet2;
+  color: $violet;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  padding: 1rem;
+}
+
 
 .mobile-search-button{
   width: auto;
@@ -23,3 +49,14 @@ button{
   margin: 2rem auto;
 }
 
+.job-details{
+  margin-block-start: 2rem;
+}
+
+.description{
+  padding-block-end: 4.625rem;
+}
+
+.req-content{
+  margin-block-start: 1.3125rem;
+}

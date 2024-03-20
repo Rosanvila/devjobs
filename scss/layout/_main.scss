@@ -2,14 +2,6 @@
   background-color: $light-grey;
 }
 
-h2{
-  display:none;
-}
-
-.main-content {
-  display: grid;
-}
-
 .jobs-container {
   display: grid;
   row-gap: 3.0625rem;
@@ -44,7 +36,6 @@ h2{
 
 .job-title {
   margin-block: 0.75rem;
-  text-decoration: none;
 }
 
 .job-location {
