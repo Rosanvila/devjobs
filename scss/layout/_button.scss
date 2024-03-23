@@ -7,10 +7,12 @@ button{
   text-align: center;
   border: none;
   padding: 1rem;
+  text-transform: capitalize;
 }
 
 a {
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 .anchor-button {
@@ -21,7 +23,7 @@ a {
   font-weight: 700;
   text-align: center;
   border: none;
-  padding-block: .75rem;
+  padding: .6875rem 1.75rem;
 }
 
 .anchor-button-2{
@@ -49,14 +51,3 @@ a {
   margin: 2rem auto;
 }
 
-.job-details{
-  margin-block-start: 2rem;
-}
-
-.description{
-  padding-block-end: 4.625rem;
-}
-
-.req-content{
-  margin-block-start: 1.3125rem;
-}

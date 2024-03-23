@@ -85,28 +85,29 @@
 
     <section class="jobs" id="jobs">
       <h1>jobs</h1>
-      <div class="container jobs-container">
+      <div class="container jobs-container" id="jobs-container">
+        <template id="job-template" id="job-template">
         <article class="job-card" id="job-card" aria-label="job-card">
           <div class="job-logo" id="logo-back">
-            <img src="./img/scoot.svg" alt="" id="logo">
+            <img src="" alt="" id="logo" class="logo">
           </div>
           <div id="jod-description" class="job-description">
-            <p id="postedAt">5h ago</p>
+            <p id="postedAt" class="postedAt"></p>
             <span>&#183;</span>
-            <p id="contract">Full Time</p>
+            <p id="contract" class="contract"></p>
           </div>
           <a href="link" class="job-title" id="job-title" >
-            <h2 class="h2" id="position">Senior Software Engineer</h2>
+            <h2 class="h2" id="position" class="position"></h2>
           </a>
-          <p id="company">Scoot</p>
-          <h3 class="h3 job-location" id="location">United Kingdom</h3>
+          <p id="company" class="company"></p>
+          <h3 class="h3 job-location" id="location"></h3>
         </article>
-
+      </template>
       </div>
     </section>
 
 
-    <button type="button"  aria-label="button" id="load-more-button" class="load-more-button">Load
+    <button type="button" aria-label="button" id="load-more-button" class="load-more-button">Load
       More</button>
   </main>
   <script src="js/api.js"></script>
