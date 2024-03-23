@@ -40,4 +40,27 @@ createCardElement = (job) => {
   jobPostedAt.textContent = `${job.postedAt}`;
 
   return clonedCard;
+}; 
+
+jobsCard = (job) => {
+  const cardElement = createCardElement(job);
+  jobsContainer.appendChild(cardElement);
 };
+
+/***************RECUPERATION DES DETAILS D'UN JOB*************/
+/*************************************************************/
+
+const jobDetailContainer = document.querySelector("#jobs-details-container");
+const detailsTemplate = document.querySelector("#details-template");
+
+// createDetailsJob = (details) => {
+//   const clonedDetails = detailsTemplate.content.cloneNode(true);
+
+//   const jobCompany = clonedDetails.querySelector("#company");
+//   const jobWebsite = clonedDetails.querySelector("#website-id")
+//   const 
+
+//   const jobLogo = clonedCard.querySelector(".logo");
+//   jobLogo.src = "https://ecf-dwwm.cefim-formation.org" + job.logo;
+//   jobLogo.style.backgroundColor = job.logoBackground;
+// };

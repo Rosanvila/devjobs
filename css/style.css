@@ -328,6 +328,24 @@ input:checked + .slider:before {
   color: #5964e0;
 }
 
+.msg-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgba(87, 98, 224, 0.1019607843);
+  color: #19202d;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+.load-ended {
+  display: none;
+}
+
 @media screen and (min-width: 48em) {
   .jobs-container {
     display: grid;

@@ -13,8 +13,8 @@
 <body>
   <div class="overlay" aria-hidden="true"></div>
   <div class="skip-links">
-    <a href="#resarch-form">Skip to form</a>
-    <a href="#jobs-content">Skip to jobs content</a>
+    <a href="#research-form">Skip to form</a>
+    <a href="#jobs">Skip to jobs content</a>
   </div>
   <header class="main-header">
     <div class="container">
@@ -43,76 +43,77 @@
   </header>
   <main>
 
-      <div class="container form-container">
-        <form action="/votre-page-de-traitement.php" class="research-form" id="research-form"
-          aria-label="research-jobs-form">
-          <div class="research-content">
-            <img class="search-logo-large" src="/img/icon-search.svg" alt="">
-            <label id="reseach-title" class="reseach-title" for="by-title">
-              <input type="search" name="reseach-title" id="by-title"
-                placeholder="Filter by title, companies, expertise...">
-            </label>
-            <button type="button" id="filter-by-title-button" class="filter-button" aria-label="Filter">
-              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path fill="#6E8098"
-                  d="M19.108 0H.86a.86.86 0 0 0-.764.455.833.833 0 0 0 .068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 0 0 .248.594.865.865 0 0 0 .942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0 0 19.108 0z" />
-              </svg>
-            </button>
-            <button class="mobile-search-button" type="button">
-              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path fill="#ffffff"
-                  d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z" />
-              </svg>
-            </button>
-          </div>
-          <div class="container modal" id="modal">
-            <label id="location-label" class="filter-location" for="location-input">
-              <img src="/img/icon-location.svg" alt="">
-              <input type="search" name="location" class="location-input" id="location-input"
-                placeholder="Filter by location...">
-            </label>
-            <label class="full-time" for="full-time">
-              <input type="checkbox" id="full-time">
-              <span class="checkmark"></span>
-              Full time only
-            </label>
-            <button type="submit">Search</button>
-          </div>
-        </form>
-      </div>
+    <div class="container form-container">
+      <form class="research-form" id="research-form"
+        aria-label="research-jobs-form">
+        <div class="research-content">
+          <img class="search-logo-large" src="/img/icon-search.svg" alt="">
+          <label id="reseach-title" class="reseach-title" for="by-title">
+            <input type="search" name="reseach-title" id="by-title"
+              placeholder="Filter by title, companies, expertise...">
+          </label>
+          <button type="button" id="filter-by-title-button" class="filter-button" aria-label="Filter">
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path fill="#6E8098"
+                d="M19.108 0H.86a.86.86 0 0 0-.764.455.833.833 0 0 0 .068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 0 0 .248.594.865.865 0 0 0 .942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0 0 19.108 0z" />
+            </svg>
+          </button>
+          <button class="mobile-search-button" type="button">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="#ffffff"
+                d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z" />
+            </svg>
+          </button>
+        </div>
+        <div class="container modal" id="modal">
+          <label id="location-label" class="filter-location" for="location-input">
+            <img src="/img/icon-location.svg" alt="">
+            <input type="search" name="location" class="location-input" id="location-input"
+              placeholder="Filter by location...">
+          </label>
+          <label class="full-time" for="full-time">
+            <input type="checkbox" id="full-time">
+            <span class="checkmark"></span>
+            Full time only
+          </label>
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    </div>
 
 
 
     <section class="jobs" id="jobs">
       <h1>jobs</h1>
       <div class="container jobs-container" id="jobs-container">
-        <template id="job-template" id="job-template">
-        <article class="job-card" id="job-card" aria-label="job-card">
-          <div class="job-logo" id="logo-back">
-            <img src="" alt="" id="logo" class="logo">
-          </div>
-          <div id="jod-description" class="job-description">
-            <p id="postedAt" class="postedAt"></p>
-            <span>&#183;</span>
-            <p id="contract" class="contract"></p>
-          </div>
-          <a href="link" class="job-title" id="job-title" >
-            <h2 class="h2" id="position" class="position"></h2>
-          </a>
-          <p id="company" class="company"></p>
-          <h3 class="h3 job-location" id="location"></h3>
-        </article>
-      </template>
+        <template id="job-template">
+          <article class="job-card" id="job-card" aria-label="job-card">
+            <div class="job-logo" id="logo-back">
+              <img src="" alt="" id="logo" class="logo">
+            </div>
+            <div id="jod-description" class="job-description">
+              <p id="postedAt" class="postedAt"></p>
+              <span>&#183;</span>
+              <p id="contract" class="contract"></p>
+            </div>
+            <a href="link" class="job-title" id="job-title">
+              <h2 class="h2 position" id="position"></h2>
+            </a>
+            <p id="company" class="company"></p>
+            <h3 class="h3 job-location" id="location"></h3>
+          </article>
+        </template>
       </div>
     </section>
-
-
-    <button type="button" aria-label="button" id="load-more-button" class="load-more-button">Load
-      More</button>
+    <div>
+      <button type="button" aria-label="button" id="load-more-button" class="load-more-button">Load
+        More</button>
+        <p id="load-ended" class="load-ended msg-style">no more jobs</p>
+    </div>
   </main>
+  <script src="js/main.js"></script>
   <script src="js/api.js"></script>
   <script src="js/dom.js"></script>
-  <script src="js/main.js"></script>
 </body>
 
 </html>

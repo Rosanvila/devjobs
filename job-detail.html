@@ -39,20 +39,21 @@
   <main>
     <section class="jobs" id="jobs">
       <h1>jobs details</h1>
-      <div class="container jobs-details-container">
-        <div class="job-details-card" id="job-card" aria-label="job-card">
-          <div class="job-details-logo" id="job-logo">
-            <img src="./img/scoot.svg" alt="" id="logo">
-          </div>
-          <div class="job-site">
-            <div>
-              <h2 class="h1" id="company">Scoot</h2>
-              <p class="website-id" id="website-id">scoot.com</p>
+      <div class="container jobs-details-container" id="jobs-details-container">
+        <template id="details-template">
+          <div class="job-details-card" id="job-details-card" aria-label="job-card">
+            <div class="job-details-logo" id="job-logo">
+              <img src="" alt="" id="logo">
             </div>
-            <a class="anchor-button-2" href="company-site" id="company-website">company site
-            </a>
+            <div class="job-site">
+              <div>
+                <h2 class="h1" id="company"></h2>
+                <p class="website-id" id="website-id"></p>
+              </div>
+              <a class="anchor-button-2" href="company-site" id="company-website">company site</a>
+            </div>
           </div>
-        </div>
+        </template>
       </div>
     </section>
 
@@ -128,7 +129,7 @@
             <h2 class="h1" id="footer-position">senior software engineer</h2>
             <p id="footer-company">scoot</p>
           </div>
-            <a class="anchor-button" id="footer-apply-btn" href="apply">apply now</a>
+          <a class="anchor-button" id="footer-apply-btn" href="apply">apply now</a>
         </div>
       </div>
     </footer>
