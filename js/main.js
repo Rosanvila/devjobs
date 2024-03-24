@@ -14,4 +14,3 @@ loadMoreBtn.addEventListener("click", () => {
   }
 });
 
-

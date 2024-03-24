@@ -32,11 +32,12 @@ createDetailsJob = (data) => {
   const detailsDesc = clonedDetails.querySelector("#description");
   const detailsReqContent = clonedDetails.querySelector("#req-content");
   const detailsRoleContent = clonedDetails.querySelector("#do-content");
+  
+  detailsApplyBtn.setAttribute("href", data.apply);
   detailsPostedAt.textContent = data.postedAt;
   detailsContract.textContent = data.contract;
   detailsPosition.textContent = data.position;
   detailsLocation.textContent = data.location;
-  detailsApplyBtn.setAttribute("href", data.apply);
   detailsDesc.textContent = data.description;
   detailsReqContent.textContent = data.requirements.content;
   detailsRoleContent.textContent = data.role.content;
@@ -49,6 +50,7 @@ createDetailsJob = (data) => {
   const footerPosition = footerDetails.querySelector("#footer-position")
   const footerCompany = footerDetails.querySelector("#footer-company")
   const footerApplyBtn = footerDetails.querySelector("#footer-apply-btn")
+  
   footerApplyBtn.setAttribute("href", data.apply);
   footerPosition.textContent = data.position;
   footerCompany.textContent = data.company;

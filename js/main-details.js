@@ -22,16 +22,6 @@ RoleItems = (bloup, data) => {
   });
 };
 
-
-/*************BOUTON MENANT A LA PAGE DETAILS DE l'OFFRE*************/
-
-const detailsLinks = document.querySelectorAll(".job-title");
-
-detailsLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault(); 
-    const jobId = link.getAttribute("href").split("/")[1];
-    console.log(jobId);
-    apiGoDetails(jobId);
-  });
-});
+const urlParamsId = new URLSearchParams(window.location.search);
+const jobId = urlParamsId.get("id");
+apiGoDetails(jobId);

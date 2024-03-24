@@ -28,9 +28,9 @@ createCardElement = (job) => {
   const jobLocation = clonedCard.querySelector(".job-location");
   const jobPosition = clonedCard.querySelector("#position");
   const jobPostedAt = clonedCard.querySelector("#postedAt");
-  const jobTitleLink = clonedCard.querySelector("#job-title");
-
-  jobTitleLink.href = `/${job.id}`;
+  const jobTitleLink = clonedCard.querySelector(".job-title");
+  
+  jobTitleLink.href = `job-detail.html?id=${job.id}`
 
   const jobLogo = clonedCard.querySelector(".logo");
   jobLogo.src = "https://ecf-dwwm.cefim-formation.org" + job.logo;
@@ -49,4 +49,3 @@ jobsCard = (job) => {
   const cardElement = createCardElement(job);
   jobsContainer.appendChild(cardElement);
 };
-
