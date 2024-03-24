@@ -1,5 +1,7 @@
+/*AJOUT DE l'OFFSET POUR LES JOB AU CLIQUE DU BOUTON LOAD MORE*/
+
 const loadMoreBtn = document.querySelector("#load-more-button");
-const loadEndedMsg = document.querySelector("#load-ended")
+const loadEndedMsg = document.querySelector("#load-ended");
 
 loadMoreBtn.addEventListener("click", () => {
   offSetJobs += 12;
@@ -7,7 +9,9 @@ loadMoreBtn.addEventListener("click", () => {
 
   if (offSetJobs >= totalJobs) {
     loadMoreBtn.classList.add("load-ended");
-    loadEndedMsg.classList.remove("load-ended")
-    loadEndedMsg.classList.add("msg-style")
+    loadEndedMsg.classList.remove("load-ended");
+    loadEndedMsg.classList.add("msg-style");
   }
 });
+
+

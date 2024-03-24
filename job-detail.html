@@ -39,16 +39,16 @@
   <main>
     <section class="jobs" id="jobs">
       <h1>jobs details</h1>
-      <div class="container jobs-details-container" id="jobs-details-container">
-        <template id="details-template">
+      <div class="container jobs-details-container" id="jobs-company-container">
+        <template id="company-template">
           <div class="job-details-card" id="job-details-card" aria-label="job-card">
             <div class="job-details-logo" id="job-logo">
-              <img src="" alt="" id="logo">
+              <img src="" alt="" id="logo" class="logo">
             </div>
             <div class="job-site">
               <div>
                 <h2 class="h1" id="company"></h2>
-                <p class="website-id" id="website-id"></p>
+                <p class="website-id" id="company-dotocm"></p>
               </div>
               <a class="anchor-button-2" href="company-site" id="company-website">company site</a>
             </div>
@@ -58,83 +58,67 @@
     </section>
 
     <section class="jobs" id="details">
-      <div class="container details-container">
-        <div id="jod-apply" class="job-apply">
-          <div>
-            <div class="details-times">
-              <p id="postedAt">5h ago</p>
-              <span>&#183;</span>
-              <p id="contract">Full Time</p>
+      <div class="container details-container" id="details-container">
+        <template id="details-template">
+          <div id="jod-apply" class="job-apply">
+            <div>
+              <div class="details-times">
+                <p id="postedAt"></p>
+                <span>&#183;</span>
+                <p id="contract"></p>
+              </div>
+              <h2 class="h2 h2-details" id="position"></h2>
+              <p class="location" id="location"></p>
             </div>
-            <h2 class="h2 h2-details" id="position">senior software engineer</h2>
-            <p class="location" id="location">United kingdom</p>
+            <a class="anchor-button" id="apply" href="apply">apply now</a>
           </div>
-          <a class="anchor-button" id="apply" href="apply">apply now</a>
-        </div>
-        <div class="job-details" id="job-details">
-          <p class="description" id="description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi laborum at nostrum ducimus ipsum deserunt
-            magni accusamus expedita saepe, inventore, omnis nam veritatis ad blanditiis atque fuga excepturi? Aperiam
-            esse dolorum quo cumque laboriosam consectetur! Incidunt, impedit? Neque est molestias numquam vero commodi
-            explicabo excepturi quam obcaecati accusamus sint voluptas ut illum consequuntur, saepe, placeat, dolor
-            perferendis ullam minus. Quis quod ex repellat adipisci unde magni repudiandae corporis reprehenderit error
-            beatae! Sed maiores nam at architecto atque fuga. Molestiae consectetur laboriosam, mollitia soluta nobis
-            nisi optio assumenda ex ducimus dolore ad eveniet exercitationem earum repellendus expedita quisquam
-            officiis ut explicabo.
-          </p>
-          <div>
-            <h2 class="h2">Requirements</h2>
+          <div class="job-details" id="job-details">
+            <p class="description" id="description"></p>
             <div>
-              <p id="req-content" class="req-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
-                sint nemo voluptatem
-                mollitia debitis. Maxime cupiditate eos laborum nisi rem velit cum ullam quo totam ab. Maxime,
-                distinctio voluptatibus non optio qui odio totam porro sequi possimus eos? Quibusdam asperiores,
-                incidunt sint dignissimos illum voluptatem non, assumenda dolore deserunt cumque, a eos fugit quo.
-                Adipisci eos corrupti animi fugit dolorum debitis, culpa veritatis nesciunt. Suscipit alias quia
-                aspernatur iste dicta corrupti dolor veritatis eveniet magni vitae, quibusdam distinctio, nemo maiores?
-              </p>
-              <ul>
-                <li id="req-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li id="req-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti quis nam?</li>
-                <li id="req-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
-                <li id="req-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque architecto
-                  distinctio aliquid officia?</li>
-              </ul>
-            </div>
-            <h2 class="h2">what you will do</h2>
-            <div>
-              <p id="do-content" class="do-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui,
-                recusandae culpa nobis
-                nulla dicta quod error fuga. Officia, dolor beatae at fugit quasi doloremque non, placeat ipsum aliquid
-                consectetur optio, ipsa ipsam sequi quos aut suscipit ab enim et molestiae repellat ullam quo doloribus
-                soluta impedit! Aliquam repudiandae commodi, veniam sequi sunt iure esse suscipit nobis cupiditate. Qui,
-                est ducimus.
-              </p>
-              <ol class="do-list">
-                <li id="do-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
-                <li id="do-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
-                <li id="do-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
-                <li id="do-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quisquam?</li>
-              </ol>
+              <h2 class="h2">Requirements</h2>
+              <div>
+                <p id="req-content" class="req-content"></p>
+                <ul>
+                  <li class="job-req" id="req-1"></li>
+                  <li class="job-req" id="req-2"></li>
+                  <li class="job-req" id="req-3"></li>
+                  <li class="job-req" id="req-4"></li>
+                </ul>
+              </div>
+              <h2 class="h2">what you will do</h2>
+              <div>
+                <p id="do-content" class="do-content"></p>
+                <ol class="do-list">
+                  <li class="job-role" id="do-1"></li>
+                  <li class="job-role" id="do-2"></li>
+                  <li class="job-role" id="do-3"></li>
+                  <li class="job-role" id="do-4"></li>
+                </ol>
+              </div>
             </div>
           </div>
-        </div>
+        </template>
       </div>
     </section>
 
     <footer>
-      <div class="container footer-container">
-        <div class="footer-job-card" id="footer-job-card" aria-label="job-card">
-          <div class="footer-job-site">
-            <h2 class="h1" id="footer-position">senior software engineer</h2>
-            <p id="footer-company">scoot</p>
+      <div class="container footer-container" id="footer-container">
+        <template id="footer-template">
+          <div class="footer-job-card" id="footer-job-card" aria-label="job-card">
+            <div class="footer-job-site">
+              <h2 class="h1" id="footer-position"></h2>
+              <p id="footer-company"></p>
+            </div>
+            <a class="anchor-button" id="footer-apply-btn" href="">apply now</a>
           </div>
-          <a class="anchor-button" id="footer-apply-btn" href="apply">apply now</a>
-        </div>
+        </template>
       </div>
     </footer>
 
   </main>
+  <script src="js/main-details.js"></script>
+  <script src="js/dom-details.js"></script>
+  <script src="js/api-details.js"></script>
 </body>
 
 </html>

@@ -25,5 +25,5 @@ apiGetAllCard = () => {
       console.error("Erreur de requête:", error.message);
     });
 };
-
 apiGetAllCard();
+
