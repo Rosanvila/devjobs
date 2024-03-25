@@ -8,6 +8,7 @@ apiGoDetails = () => {
       return response.json();
     })
     .then((data) => {
+      
       jobCompanyDetails(data);
       console.log("Les détails de l'emploi ont été récupérés avec succès");
     })
@@ -16,4 +17,4 @@ apiGoDetails = () => {
     });
 };
 
-apiGoDetails();
+apiGoDetails(jobId);

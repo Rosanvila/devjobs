@@ -22,6 +22,7 @@ RoleItems = (bloup, data) => {
   });
 };
 
+/************RECUPERATION DE l'ID DANS L'URL******************/
+
 const urlParamsId = new URLSearchParams(window.location.search);
 const jobId = urlParamsId.get("id");
-apiGoDetails(jobId);

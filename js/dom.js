@@ -40,7 +40,8 @@ createCardElement = (job) => {
   jobContract.textContent = `${job.contract}`;
   jobLocation.textContent = `${job.location}`;
   jobPosition.textContent = `${job.position}`;
-  jobPostedAt.textContent = `${job.postedAt}`;
+
+  jobPostedAt.textContent = timeFormat(job.postedAt);
 
   return clonedCard;
 };
