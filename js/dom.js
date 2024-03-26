@@ -9,13 +9,16 @@ filterBtn.addEventListener("click", () => {
   overlay.classList.add("overlay-open");
 });
 
+if (window.innerWidth > 768) {
+  overlay.classList.remove("overlay-open");
+}
 overlay.addEventListener("click", () => {
   mobileModal.classList.remove("modal-open");
   overlay.classList.remove("overlay-open");
 });
 
-/*****************RECUPERATION DES JOBS VIA TEMPLATE****************/
-/*******************************************************************/
+/*************RECUPERATION DES JOBS VIA TEMPLATE***********/
+/*********************************************************/
 
 const jobsContainer = document.querySelector("#jobs-container");
 const jobsTemplate = document.querySelector("#job-template");
@@ -29,8 +32,8 @@ createCardElement = (job) => {
   const jobPosition = clonedCard.querySelector("#position");
   const jobPostedAt = clonedCard.querySelector("#postedAt");
   const jobTitleLink = clonedCard.querySelector(".job-title");
-  
-  jobTitleLink.href = `job-detail.html?id=${job.id}`
+
+  jobTitleLink.href = `job-detail.html?id=${job.id}`;
 
   const jobLogo = clonedCard.querySelector(".logo");
   jobLogo.src = "https://ecf-dwwm.cefim-formation.org" + job.logo;
