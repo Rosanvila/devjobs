@@ -43,11 +43,11 @@ apiGetAllCard();
 
 /***********API RECHERCHER UN JOB PAR CRITERE**********/
 
-apiFiltedSearch = (textValue,locationValue) => {
+apiFiltedSearch = (textValue,locationValue,fullTime) => {
   jobsContainer.innerHTML = "";
   
   fetch(
-    `https://ecf-dwwm.cefim-formation.org/api/jobs/search?text=${textValue}&location=${locationValue}`
+    `https://ecf-dwwm.cefim-formation.org/api/jobs/search?text=${textValue}&location=${locationValue}&fulltime=${fullTime}`
   )
     .then((response) => {
       if (!response.ok) {
