@@ -43,11 +43,11 @@ apiGetAllCard();
 
 /***********API RECHERCHER UN JOB PAR CRITERE**********/
 
-apiFiltedSearch = (textValue,locationValue) => {
+apiFiltedSearch = (textValue,locationValue,fullTime) => {
   jobsContainer.innerHTML = "";
   
   fetch(
-    `https://ecf-dwwm.cefim-formation.org/api/jobs/search?text=${textValue}&location=${locationValue}`
+    `https://ecf-dwwm.cefim-formation.org/api/jobs/search?text=${textValue}&location=${locationValue}&fulltime=${fullTime}`
   )
     .then((response) => {
       if (!response.ok) {
@@ -56,10 +56,10 @@ apiFiltedSearch = (textValue,locationValue) => {
       return response.json();
     })
     .then((data) => {
+      console.log(data);
       const jobsOrder = data.jobs.sort((a, b) => b.postedAt - a.postedAt);
-      totalJobs = data.total;
-      offSetJobs += 12;
 
+      totalJobs = data.total;
 
       if (offSetJobs >= totalJobs) {
         loadEndedMsg.classList.remove("load-ended");
