@@ -35,8 +35,9 @@ const timeFormat = (timestamp) => {
 
 const byText = document.querySelector("#by-title");
 const researchBtn = document.querySelector("#form-btn");
+const byLocation = document.querySelector("#location-input");
 
 researchBtn.addEventListener("click", (ev) => {
   ev.preventDefault();
-  apiFiltedSearch(byText.value.toLowerCase());
+  apiFiltedSearch(byText.value.toLowerCase(), byLocation.value.toLowerCase());
 });
