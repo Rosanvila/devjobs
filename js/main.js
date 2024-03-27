@@ -30,3 +30,13 @@ const timeFormat = (timestamp) => {
     return years + "y ago";
   }
 };
+
+/*******PARAMETRES DE FILTRE VIA FORMULAIRE*******/
+
+const byText = document.querySelector("#by-title");
+const researchBtn = document.querySelector("#form-btn");
+
+researchBtn.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  apiFiltedSearch(byText.value.toLowerCase());
+});

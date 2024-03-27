@@ -49,7 +49,7 @@ createCardElement = (job) => {
   return clonedCard;
 };
 
-jobsCard = (job) => {
+const jobsCard = (job) => {
   const cardElement = createCardElement(job);
   jobsContainer.appendChild(cardElement);
 };
