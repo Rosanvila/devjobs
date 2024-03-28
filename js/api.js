@@ -56,9 +56,8 @@ apiFiltedSearch = (textValue,locationValue,fullTime) => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       const jobsOrder = data.jobs.sort((a, b) => b.postedAt - a.postedAt);
-
+      console.log(data);
       totalJobs = data.total;
 
       if (offSetJobs >= totalJobs) {

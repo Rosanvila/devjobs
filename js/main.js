@@ -43,5 +43,5 @@ researchBtn.addEventListener("click", (ev) => {
   const isFullTime = fullTimeBox.checked ? 1 : 0;
   ev.preventDefault();
   apiFiltedSearch(byText.value.toLowerCase(), byLocation.value.toLowerCase(), isFullTime);
-  apiFiltedSearch(byText.value.toLowerCase(), byLocation.value.toLowerCase(), isFullTime);
+
 });
