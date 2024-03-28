@@ -37,10 +37,10 @@ const byText = document.querySelector("#by-title");
 const researchBtn = document.querySelector("#form-btn");
 const byLocation = document.querySelector("#location-input");
 const fullTimeBox = document.querySelector("#full-time");
-const isFullTime = fullTimeBox.checked ? 1 : 0;
 
 
 researchBtn.addEventListener("click", (ev) => {
+  const isFullTime = fullTimeBox.checked ? 1 : 0;
   ev.preventDefault();
   apiFiltedSearch(byText.value.toLowerCase(), byLocation.value.toLowerCase(), isFullTime);
 });
