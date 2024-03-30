@@ -59,7 +59,8 @@ loadMoreJobs = () => {
 researchBtn.addEventListener("click", (ev) => {
   isFullTime = fullTimeBox.checked ? 1 : 0;
   offSetJobs = 0;
-  ev.preventDefault(); // Empêche le rechargement de la page
+  ev.preventDefault(); 
+  jobsContainer.innerHTML = "";
   isSearchInProgress = true;
   apiFiltedSearch(
     byText.value.toLowerCase(),
