@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.darkmode {
+  color: #ffffff;
+  background-color: #121721;
+}
+
 /* https://piccalil.li/blog/a-modern-css-reset */
 /* Box sizing rules */
 *,
@@ -284,6 +289,11 @@ input:checked + .slider:before {
     background-size: cover;
   }
 }
+@media screen and (min-width: 75em) {
+  .main-header {
+    border-bottom-left-radius: 6rem;
+  }
+}
 .jobs-container {
   display: grid;
   row-gap: 3.0625rem;
@@ -305,8 +315,12 @@ input:checked + .slider:before {
   transform: translateY(-50%);
   width: 3.125rem;
   height: 3.125rem;
-  background-color: orange;
-  border-radius: 15px;
+}
+
+.job-logo img {
+  border-radius: 1rem;
+  padding-block: 0.75rem;
+  padding-inline: 0.6rem;
 }
 
 .job-description {
@@ -376,7 +390,6 @@ input:checked + .slider:before {
 
 .modal-open {
   visibility: visible;
-  background-color: #ffffff;
 }
 
 .overlay {
@@ -572,10 +585,19 @@ a {
 .research-form input {
   border: none;
   width: 100%;
+  background-color: #ffffff;
+}
+
+.filter-button {
+  background-color: #ffffff;
 }
 
 .research-content {
   display: flex;
+  padding: 1rem;
+}
+
+.research-content img {
   padding: 1rem;
 }
 

@@ -1,6 +1,6 @@
 .research-form {
   position: relative;
-  background-color: $white;
+  background-color: $other;
   border-radius: 0.375rem;
   font-weight: 400;
   width: 100%;
@@ -10,10 +10,19 @@
 .research-form input {
   border: none;
   width: 100%;
+  background-color: $other;
+}
+
+.filter-button {
+  background-color: $other;
 }
 
 .research-content {
   display: flex;
+  padding: 1rem;
+}
+
+.research-content img {
   padding: 1rem;
 }
 

@@ -22,14 +22,14 @@ body {
   font-size: $unnamed-font-size-16;
   line-height: $unnamed-line-spacing-26;
   letter-spacing: $unnamed-character-spacing-0;
-  color: $very-dark-blue;
-  background-color: $light-grey;
+  color: $txt;
+  background-color: $bg;
 }
 
 :is(h1, h2, h3, h4, .h1, .h2, .h3) {
   font-family: $unnamed-font-family-kumbh-sans;
   font-weight: $unnamed-font-weight-bold;
-  color: $very-dark-blue;
+  color: $txt;
 }  
 
 

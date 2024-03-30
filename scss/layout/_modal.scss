@@ -6,7 +6,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: $white;
+  background-color: $other;
   border-radius: 0.375rem;
   overflow: hidden;
   padding: 1rem;
@@ -16,7 +16,6 @@
 
 .modal-open {
   visibility: visible;
-  background-color: $white;
 }
 
 .overlay {

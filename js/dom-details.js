@@ -35,6 +35,7 @@ createDetailsJob = (data) => {
   
   detailsApplyBtn.setAttribute("href", data.apply);
   detailsPostedAt.textContent = data.postedAt;
+  detailsPostedAt.textContent = detailsTimeFormat(data.postedAt);
   detailsContract.textContent = data.contract;
   detailsPosition.textContent = data.position;
   detailsLocation.textContent = data.location;
@@ -65,3 +66,27 @@ jobCompanyDetails = (data) => {
   footerContainer.appendChild(footer);
 };
 
+/**********RECUPERATION DE LA DATE DE PARUTION DE L'OFFRE*******/
+/*************************************************************/
+
+detailsTimeFormat = (timestamp) => {
+  const now = Date.now();
+  const difference = now - timestamp;
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+  if (days < 1) {
+    const hours = Math.floor(difference / (1000 * 60 * 60));
+    return hours + "h ago";
+  } else if (days < 7) {
+    return days + "d ago";
+  } else if (days < 30) {
+    const weeks = Math.floor(days / 7);
+    return weeks + "w ago";
+  } else if (days < 365) {
+    const months = Math.floor(days / 30);
+    return months + "mo ago";
+  } else {
+    const years = Math.floor(days / 365);
+    return years + "y ago";
+  }
+};

@@ -85,6 +85,11 @@ input:checked + .slider:before {
     background-position: 0;
 
     background-size: cover;
-    
   }
+}
+
+@include mq(xl){
+.main-header{
+  border-bottom-left-radius: 6rem;
+}
 }
