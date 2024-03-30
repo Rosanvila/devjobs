@@ -1,12 +1,3 @@
-/*AJOUT DE l'OFFSET POUR LES JOB AU CLIQUE DU BOUTON LOAD MORE*/
-const loadMoreBtn = document.querySelector("#load-more-button");
-const loadEndedMsg = document.querySelector("#load-ended");
-let offSetJobs = 0;
-
-loadMoreBtn.addEventListener("click", () => {
-  apiGetAllCard(offSetJobs);
-});
-
 /**********RECUPERATION DE LA DATE DE PARUTION DE L'OFFRE*******/
 
 const timeFormat = (timestamp) => {
@@ -30,18 +21,51 @@ const timeFormat = (timestamp) => {
     return years + "y ago";
   }
 };
+/*************************************************************/
+let isSearchInProgress = false;
+let offSetJobs = 0;
 
-/*******PARAMETRES DE FILTRE VIA FORMULAIRE*******/
+// Fonction pour charger plus de jobs
+loadMoreJobs = () => {
+  if (isSearchInProgress) {
+    // Si une recherche est en cours, charger plus de jobs filtrés
+    apiFiltedSearch(
+      byText.value.toLowerCase(),
+      byLocation.value.toLowerCase(),
+      isFullTime,
+      );
+    } else {
+      // Sinon, charger plus de jobs normaux
+      apiGetAllCard();
+    }
+  };
+  
+  /*AJOUT DE l'OFFSET POUR LES JOB AU CLIQUE DU BOUTON LOAD MORE*/
+  const loadMoreBtn = document.querySelector("#load-more-button");
+  const loadEndedMsg = document.querySelector("#load-ended");
+  
+  loadMoreBtn.addEventListener("click", () => {
+    loadMoreJobs();
+  });
 
-const byText = document.querySelector("#by-title");
-const researchBtn = document.querySelector("#form-btn");
-const byLocation = document.querySelector("#location-input");
-const fullTimeBox = document.querySelector("#full-time");
-
+  /*******PARAMETRES DE FILTRE VIA FORMULAIRE*******/
+  
+  const byText = document.querySelector("#by-title");
+  const researchBtn = document.querySelector("#form-btn");
+  const byLocation = document.querySelector("#location-input");
+  const fullTimeBox = document.querySelector("#full-time");
+  let isFullTime = fullTimeBox.checked ? 1 : 0;
 
 researchBtn.addEventListener("click", (ev) => {
-  const isFullTime = fullTimeBox.checked ? 1 : 0;
-  ev.preventDefault();
-  apiFiltedSearch(byText.value.toLowerCase(), byLocation.value.toLowerCase(), isFullTime);
-
+  isFullTime = fullTimeBox.checked ? 1 : 0;
+  offSetJobs = 0;
+  ev.preventDefault(); // Empêche le rechargement de la page
+  isSearchInProgress = true;
+  apiFiltedSearch(
+    byText.value.toLowerCase(),
+    byLocation.value.toLowerCase(),
+    isFullTime,
+    offSetJobs
+  );
 });
+

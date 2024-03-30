@@ -1,15 +1,9 @@
-.jobs {
-  background-color: $light-grey;
-}
-
 .jobs-container {
   display: grid;
   row-gap: 3.0625rem;
   padding-block-end: 2rem;
-  background-color: $white;
   border-radius: 0.375rem;
   margin-block-start: 3.5625rem;
-  background-color: $light-grey;
 }
 
 .job-card {

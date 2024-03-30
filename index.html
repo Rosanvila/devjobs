@@ -44,8 +44,7 @@
   <main>
 
     <div class="container form-container">
-      <form class="research-form" id="research-form"
-        aria-label="research-jobs-form">
+      <form class="research-form" id="research-form" aria-label="research-jobs-form">
         <div class="research-content">
           <img class="search-logo-large" src="/img/icon-search.svg" alt="">
           <label id="reseach-title" class="reseach-title" for="by-title">
@@ -76,7 +75,9 @@
             <span class="checkmark"></span>
             Full time only
           </label>
-          <button type="submit" id="form-btn">search</button>
+          <div>
+            <button type="submit" id="form-btn">search</button>
+          </div>
         </div>
       </form>
     </div>
@@ -108,7 +109,7 @@
     <div>
       <button type="button" aria-label="button" id="load-more-button" class="load-more-button">Load
         More</button>
-        <p id="load-ended" class="load-ended msg-style">no more jobs</p>
+      <p id="load-ended" class="load-ended msg-style">no more jobs</p>
     </div>
   </main>
   <script src="js/main.js"></script>

@@ -1,3 +1,5 @@
+/******AFFICHAGE DE LA PAGE DETAILS SELON L'OFFRE CLIQUEE*******/
+/**************************************************************/
 
 apiGoDetails = () => {
   fetch(`https://ecf-dwwm.cefim-formation.org/api/job/${jobId}`)
