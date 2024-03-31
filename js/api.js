@@ -43,6 +43,8 @@ apiGetAllCard();
 
 apiFiltedSearch = async (textValue, locationValue, fullTime) => {
   try {
+    const loadMoreBtn = document.getElementById("load-more-button");
+    loadMoreBtn.classList.add("load-more-api");
     const response = await fetch(
       `https://ecf-dwwm.cefim-formation.org/api/jobs/search?text=${textValue}&location=${locationValue}&fulltime=${fullTime}&offset=${offSetJobs}`
     );
@@ -73,5 +75,6 @@ apiFiltedSearch = async (textValue, locationValue, fullTime) => {
     loadMoreBtn.classList.remove("load-more-api");
   } catch (error) {
     console.error("Erreur de requête:", error.message);
+    loadMoreBtn.classList.remove("load-more-api");
   }
 };

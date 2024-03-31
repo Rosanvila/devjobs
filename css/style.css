@@ -12,15 +12,21 @@
   --txt: var(--very-dark-blue);
   --bg: var(--light-grey);
   --other: var(--white);
+  --border: var(--grey);
+  --filter: var(--dark-grey);
   --dark-txt: var(--white);
   --dark-bg: var(--midnight);
   --dark-other: var(--very-dark-blue);
+  --dark-border: var(--dark-grey);
+  --dark-filter: var(--white);
 }
 
 .darkmode {
   --txt: var(--dark-txt);
   --bg: var(--dark-bg);
   --other: var(--dark-other);
+  --border: var(--dark-border);
+  --filter: var(--dark-filter);
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -220,7 +226,7 @@ p, li {
 
 .container {
   margin-inline: auto;
-  width: clamp(20.438rem, 3.206rem + 73.521vw, 69.375rem);
+  width: calc(100% - 1.5rem - 1.5rem);
 }
 
 h1 {
@@ -303,6 +309,10 @@ input:checked + .slider:before {
 }
 
 @media screen and (min-width: 48em) {
+  .container {
+    margin-inline: auto;
+    width: calc(100% - 2.4375rem - 2.4375rem);
+  }
   .main-header {
     background-position: 0;
     background-size: cover;
@@ -311,6 +321,12 @@ input:checked + .slider:before {
 @media screen and (min-width: 75em) {
   .main-header {
     border-bottom-left-radius: 6rem;
+  }
+}
+@media screen and (min-width: 87.5em) {
+  .container {
+    margin-inline: auto;
+    width: calc(100% - 10.3125rem - 10.3125rem);
   }
 }
 .jobs-container {
@@ -362,7 +378,7 @@ input:checked + .slider:before {
   justify-content: center;
   border-radius: 5px;
   background-color: var(--violet2);
-  color: var(--very-dark-blue);
+  color: var(--txt);
   font-weight: 700;
   text-align: center;
   border: none;
@@ -402,7 +418,6 @@ input:checked + .slider:before {
   background-color: var(--other);
   border-radius: 0.375rem;
   overflow: hidden;
-  padding: 1rem;
   gap: 1.5rem;
   z-index: 10;
 }
@@ -426,25 +441,16 @@ input:checked + .slider:before {
   display: block;
 }
 
-.filter-location::after {
-  content: "";
-  position: absolute;
-  top: 35%;
-  left: 0;
-  display: block;
-  border-bottom: 1px solid var(--dark-grey);
-  width: 100%;
-}
-
 .full-time {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 4.5rem;
   cursor: pointer;
   font-size: 22px;
   user-select: none;
   font-size: 1rem;
   font-weight: 700;
+  height: 100%;
 }
 
 .full-time input {
@@ -457,8 +463,8 @@ input:checked + .slider:before {
 
 .checkmark {
   position: absolute;
-  top: -25%;
-  left: 0;
+  top: 0;
+  left: 1.5625rem;
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 0.1875rem;
@@ -489,18 +495,11 @@ input:checked + .slider:before {
   transform: rotate(45deg);
 }
 
+.filter {
+  fill: var(--filter);
+}
+
 @media screen and (min-width: 48em) {
-  .filter-location::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 60%;
-    width: 2px;
-    background-color: var(--light-grey);
-    height: 100%;
-    border-bottom: 0;
-  }
   .modal {
     position: initial;
     visibility: visible;
@@ -516,13 +515,22 @@ input:checked + .slider:before {
   .overlay-open {
     display: none;
   }
+  .full-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--border);
+  }
   .checkmark {
-    top: 0;
+    top: 30px;
   }
 }
 @media screen and (min-width: 48em) and (min-width: 75em) {
   .filter-location::after {
     left: 67%;
+  }
+  .modal-search-button button {
+    width: 7.6875rem;
   }
 }
 button {
@@ -537,6 +545,7 @@ button {
   border: none;
   padding: 1rem;
   text-transform: capitalize;
+  width: 100%;
 }
 
 a {
@@ -574,6 +583,10 @@ a {
   width: auto;
 }
 
+.modal-search-button {
+  padding: 1rem;
+}
+
 .filter-button {
   width: auto;
   background-color: var(--white);
@@ -581,6 +594,7 @@ a {
 
 .load-more-button {
   margin: 2rem auto;
+  width: 141px;
 }
 
 .load-more-api {
@@ -603,8 +617,9 @@ a {
 
 .research-form input {
   border: none;
-  width: 100%;
   background-color: var(--other);
+  color: var(--txt);
+  width: 100%;
 }
 
 .filter-button {
@@ -613,6 +628,7 @@ a {
 
 .research-content {
   display: flex;
+  justify-content: space-between;
   padding: 1rem;
 }
 
@@ -629,7 +645,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-block-end: 1.5rem;
+  border-bottom: 1px solid var(--other);
+  height: 100%;
+  padding: 1.5rem;
 }
 
 .filter-location img {
@@ -645,7 +663,8 @@ a {
     display: flex;
   }
   .filter-location {
-    margin-block-end: 0;
+    border-bottom: none;
+    padding: 1rem;
   }
   .filter-button {
     display: none;
@@ -657,11 +676,8 @@ a {
     display: block;
     padding-inline-end: 1rem;
   }
-  label {
-    padding-inline-end: 1rem;
-  }
   .research-content {
-    border-right: 2px solid var(--light-grey);
+    border-right: 1px solid var(--border);
   }
 }
 @media screen and (min-width: 75em) {
@@ -685,7 +701,7 @@ a {
   border-radius: 0.375rem;
   margin-block-end: 2rem;
   background-color: var(--other);
-  transform: translateY(-10%);
+  transform: translateY(-25%);
 }
 
 .job-site {
@@ -823,6 +839,14 @@ footer {
   .footer-job-card {
     display: flex;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 87.5em) {
+  .jobs-details-container {
+    width: calc(100% - 22.1875rem - 22.1875rem);
+  }
+  .details-container {
+    width: calc(100% - 22.1875rem - 22.1875rem);
   }
 }
 /*

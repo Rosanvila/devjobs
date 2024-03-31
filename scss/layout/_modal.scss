@@ -9,7 +9,6 @@
   background-color: var(--other);
   border-radius: 0.375rem;
   overflow: hidden;
-  padding: 1rem;
   gap: 1.5rem;
   z-index: 10;
 }
@@ -33,25 +32,16 @@
   display: block;
 }
 
-.filter-location::after {
-  content: "";
-  position: absolute;
-  top: 35%;
-  left: 0;
-  display: block;
-  border-bottom: 1px solid var(--dark-grey);
-  width: 100%;
-}
-
 .full-time {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 4.5rem;
   cursor: pointer;
   font-size: 22px;
   user-select: none;
   font-size: 1rem;
   font-weight: 700;
+  height: 100%;
 }
 
 .full-time input {
@@ -64,8 +54,8 @@
 
 .checkmark {
   position: absolute;
-  top: -25%;
-  left: 0;
+  top: 0;
+  left: 1.5625rem;
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 0.1875rem;
@@ -96,19 +86,11 @@
   transform: rotate(45deg);
 }
 
+.filter{
+  fill: var(--filter);
+}
+
 @include mq(md) {
-  .filter-location::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 60%;
-    width: 2px;
-    background-color: var(--light-grey);
-    height: 100%;
-    border-bottom: 0;
-  }
-  
   .modal {
     position: initial;
     visibility: visible;
@@ -126,13 +108,22 @@
     display: none;
   }
 
+  .full-time{
+    @include center-flex;
+    border-left: 1px solid var(--border);
+  }
+
   .checkmark {
-    top: 0;
+    top: 30px;
   }
 
   @include mq(xl){
     .filter-location::after{
       left: 67%;
+    }
+
+    .modal-search-button button{
+      width: 7.6875rem;
     }
   }
 }

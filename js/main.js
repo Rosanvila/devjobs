@@ -33,6 +33,12 @@ const fullTimeBox = document.querySelector("#full-time");
 let isFullTime = fullTimeBox.checked ? 1 : 0;
 
 researchBtn.addEventListener("click", (ev) => {
+  loadEndedMsg.classList.remove("msg-style");
+  loadEndedMsg.classList.add("load-ended");
+  loadMoreBtn.classList.remove("load-ended");
+  mobileModal.classList.remove("modal-open");
+  overlay.classList.remove("overlay-open");
+
   isFullTime = fullTimeBox.checked ? 1 : 0;
   offSetJobs = 0;
   ev.preventDefault();

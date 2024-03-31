@@ -12,16 +12,23 @@
   --txt: var(--very-dark-blue);
   --bg: var(--light-grey);
   --other: var(--white);
+  --border: var(--grey);
+  --filter: var(--dark-grey);
+  
 
   --dark-txt: var(--white);
   --dark-bg: var(--midnight);
   --dark-other: var(--very-dark-blue);
+  --dark-border: var(--dark-grey);
+  --dark-filter: var(--white);
 }
 
 .darkmode {
   --txt: var(--dark-txt);
   --bg: var(--dark-bg);
   --other: var(--dark-other);
+  --border: var(--dark-border);
+  --filter: var(--dark-filter);
 }
 
 $unnamed-font-family-kumbh-sans: Kumbh Sans;

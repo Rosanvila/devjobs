@@ -9,8 +9,9 @@
 
 .research-form input {
   border: none;
-  width: 100%;
   background-color: var(--other);
+  color: var(--txt);
+  width: 100%;
 }
 
 .filter-button {
@@ -19,6 +20,7 @@
 
 .research-content {
   display: flex;
+  justify-content: space-between;
   padding: 1rem;
 }
 
@@ -28,12 +30,14 @@
 
 .reseach-title {
   display: flex;
-  width: 100%;
+  width: 100%
 }
 
 .filter-location {
   @include center-flex;
-  margin-block-end: 1.5rem;
+  border-bottom: 1px solid var(--other);
+  height: 100%;
+  padding: 1.5rem;
 }
 
 .filter-location img {
@@ -45,13 +49,13 @@
 }
 
 @include mq(md) {
-
   form {
     display: flex;
   }
 
   .filter-location{
-    margin-block-end: 0;
+    border-bottom: none;
+    padding: 1rem;
   }
 
   .filter-button {
@@ -66,12 +70,8 @@
     padding-inline-end: 1rem;
   }
 
-  label {
-    padding-inline-end: 1rem;
-  }
-
   .research-content {
-    border-right: 2px solid var(--light-grey);
+    border-right: 1px solid var(--border);
   }
 }
 
