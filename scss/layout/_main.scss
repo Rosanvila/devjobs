@@ -11,7 +11,7 @@
   flex-direction: column;
   padding: 0 0.5625rem 2rem 2rem;
   border-radius: 0.375rem;
-  background-color: $other;
+  background-color: var(--other);
 }
 
 .job-logo {
@@ -38,14 +38,14 @@
 
 .job-location {
   margin-block-start: 2.75rem;
-  color: $violet;
+  color: var(--violet);
 }
 
 .msg-style {
   @include center-flex;
   border-radius: 5px;
-  background-color: $violet2;
-  color: $very-dark-blue;
+  background-color: var(--violet2);
+  color: var(--very-dark-blue);
   font-weight: 700;
   text-align: center;
   border: none;

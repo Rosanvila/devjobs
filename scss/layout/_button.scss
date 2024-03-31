@@ -1,8 +1,8 @@
 button{
   @include center-flex;
   border-radius: 5px;
-  background-color: $violet;
-  color: $white;
+  background-color: var(--violet);
+  color: var(--white);
   font-weight: 700;
   text-align: center;
   border: none;
@@ -18,8 +18,8 @@ a {
 .anchor-button {
   @include center-flex;
   border-radius: 5px;
-  background-color: $violet;
-  color: $white;
+  background-color: var(--violet);
+  color: var(--white);
   font-weight: 700;
   text-align: center;
   border: none;
@@ -29,8 +29,8 @@ a {
 .anchor-button-2{
   @include center-flex;
   border-radius: 5px;
-  background-color: $violet2;
-  color: $violet;
+  background-color: var(--violet2);
+  color: var(--violet);
   font-weight: 700;
   text-align: center;
   border: none;
@@ -44,7 +44,7 @@ a {
 
 .filter-button{
   width: auto;
-  background-color: $white;
+  background-color: var(--white);
 }
 
 .load-more-button{

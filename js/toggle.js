@@ -11,17 +11,22 @@ darkModeOff = () => {
   localStorage.removeItem("darkmode");
 };
 
-if (setDarkMode === "on") {
-  darkModeOn();
-}
+togglePosition = () => {
+  setDarkMode = localStorage.getItem("darkmode");
+  if (setDarkMode === "on") {
+    darkModeToggle.checked = true;
+    darkModeOn();
+  } else {
+    darkModeToggle.checked = false;
+    darkModeOff();
+  }
+};
+togglePosition();
 
 darkModeToggle.addEventListener("click", () => {
-  setDarkMode = localStorage.getItem("darkmode");
-  if (setDarkMode !== "on") {
+  if (darkModeToggle.checked) {
     darkModeOn();
-    console.log(setDarkMode);
   } else {
     darkModeOff();
-    console.log(setDarkMode);
   }
 });

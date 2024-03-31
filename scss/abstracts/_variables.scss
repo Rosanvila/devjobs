@@ -1,20 +1,27 @@
-$dark-grey: #6e8098;
-$grey: #9daec2;
-$light-grey: #f4f6f8;
-$white: #ffffff;
-$midnight: #121721;
-$very-dark-blue: #19202d;
-$light-violet: #939bf4;
-$violet: #5964e0;
-$violet2: #5762e01a;
+:root {
+  --dark-grey: #6e8098;
+  --grey: #9daec2;
+  --light-grey: #f4f6f8;
+  --white: #ffffff;
+  --midnight: #121721;
+  --very-dark-blue: #19202d;
+  --light-violet: #939bf4;
+  --violet: #5964e0;
+  --violet2: #5762e01a;
 
-$txt: $very-dark-blue;
-$bg: $light-grey;
-$other: $white;
+  --txt: var(--very-dark-blue);
+  --bg: var(--light-grey);
+  --other: var(--white);
+
+  --dark-txt: var(--white);
+  --dark-bg: var(--midnight);
+  --dark-other: var(--very-dark-blue);
+}
 
 .darkmode {
-  color: $white;
-  background-color: $midnight;
+  --txt: var(--dark-txt);
+  --bg: var(--dark-bg);
+  --other: var(--dark-other);
 }
 
 $unnamed-font-family-kumbh-sans: Kumbh Sans;

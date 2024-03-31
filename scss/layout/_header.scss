@@ -62,22 +62,22 @@ h1{
   border-radius: 20px;
   left: 0.27em;
   bottom: 0.25em;
-  background-color: $violet;
+  background-color: var(--violet);
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: $white;
-  border: 1px solid $white;
+  background-color: var(--white);
+  border: 1px solid var(--white);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px $violet;
+  box-shadow: 0 0 1px var(--violet);
 }
 
 input:checked + .slider:before {
   transform: translateX(1.4em);
-  background-color: $violet;
+  background-color: var(--violet);
 }
 
 @include mq(md) {
