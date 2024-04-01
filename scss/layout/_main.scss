@@ -23,8 +23,8 @@
 
 .job-logo img {
   border-radius: 1rem;
-  padding-block: .75rem;
-  padding-inline: .6rem;
+  padding-block: 0.75rem;
+  padding-inline: 0.6rem;
 }
 
 .job-description {
@@ -53,9 +53,9 @@
   text-transform: capitalize;
 }
 
-.load-ended{
+.load-ended {
   display: none;
-  }
+}
 
 @include mq(md) {
   .jobs-container {

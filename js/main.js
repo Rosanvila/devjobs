@@ -20,7 +20,11 @@ const loadMoreBtn = document.querySelector("#load-more-button");
 const loadEndedMsg = document.querySelector("#load-ended");
 
 loadMoreBtn.addEventListener("click", () => {
-  loadMoreJobs();
+  try {
+    loadMoreJobs();
+  } catch (error) {
+    window.alert("Erreur lors du chargement des jobs supplémentaires: " + error.message + ", Veuillez contacter le support BlahCorp au plus vite !");
+  }
 });
 
 /********PARAMETRES DE FILTRE VIA FORMULAIRE********/

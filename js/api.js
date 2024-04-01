@@ -3,8 +3,10 @@
 
 apiGetAllCard = async () => {
   try {
-    const loadMoreBtn = document.getElementById("load-more-button");
-    loadMoreBtn.classList.add("load-more-api");
+    const loadMoreBtn = document.querySelector("#load-more-button");
+    const loaderBtn = document.querySelector("#wrapper");
+    loadMoreBtn.classList.add("load-more-button-hidden");
+    loaderBtn.classList.add("wrapper-loading");
 
     const response = await fetch(
       `https://ecf-dwwm.cefim-formation.org/api/jobs?offset=${offSetJobs}`
@@ -31,10 +33,13 @@ apiGetAllCard = async () => {
       console.log("Les jobs ont été récupérées avec succès");
     });
 
-    loadMoreBtn.classList.remove("load-more-api");
+    loaderBtn.classList.remove("wrapper-loading");
+    loadMoreBtn.classList.remove("load-more-button-hidden");
+
   } catch (error) {
-    console.error("Erreur de requête:", error.message);
-    loadMoreBtn.classList.remove("load-more-api");
+    window.alert("Erreur 404 - Ressource non trouvée");
+    loaderBtn.classList.remove("wrapper-loading");
+    loadMoreBtn.classList.remove("load-more-button-hidden");
   }
 };
 
@@ -43,8 +48,10 @@ apiGetAllCard();
 
 apiFiltedSearch = async (textValue, locationValue, fullTime) => {
   try {
-    const loadMoreBtn = document.getElementById("load-more-button");
-    loadMoreBtn.classList.add("load-more-api");
+    const loadMoreBtn = document.querySelector("#load-more-button");
+    const loaderBtn = document.querySelector("#wrapper");
+    loadMoreBtn.classList.add("load-more-button-hidden");
+    loaderBtn.classList.add("wrapper-loading");
     const response = await fetch(
       `https://ecf-dwwm.cefim-formation.org/api/jobs/search?text=${textValue}&location=${locationValue}&fulltime=${fullTime}&offset=${offSetJobs}`
     );
@@ -67,14 +74,21 @@ apiFiltedSearch = async (textValue, locationValue, fullTime) => {
       loadEndedMsg.classList.add("msg-style");
     }
 
+    if (jobsOrder.length === 0) {
+      window.alert("Aucun job trouvé.");
+    }
+
     jobsOrder.forEach((job) => {
       jobsCard(job);
       console.log("Les jobs ont été récupérés avec succès");
     });
+    loaderBtn.classList.remove("wrapper-loading");
+    loadMoreBtn.classList.remove("load-more-button-hidden");
 
     loadMoreBtn.classList.remove("load-more-api");
   } catch (error) {
     console.error("Erreur de requête:", error.message);
-    loadMoreBtn.classList.remove("load-more-api");
+    loaderBtn.classList.remove("wrapper-loading");
+    loadMoreBtn.classList.remove("load-more-button-hidden");
   }
 };

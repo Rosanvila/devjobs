@@ -2,34 +2,8 @@
 @use "abstracts/mixins" as *;
 @use "abstracts/functions" as *;
 
-@import "base/reset", "base/helpers", "base/typography", "layout/header",
-  "layout/main", "layout/footer", "layout/modal", "layout/button", "layout/form", "layout/details";
+@import "base/reset", "base/helpers", "base/typography", "layout/loader",
+  "layout/header", "layout/main", "layout/footer", "layout/modal",
+  "layout/button", "layout/form", "layout/details";
 
-/*
-Exemples de suite des imports
-@import
-  'vendors/bootstrap',
-  'vendors/jquery-ui';
 
-@import
-  'layout/navigation',
-  'layout/grid',
-  'layout/header',
-  'layout/footer',
-  'layout/sidebar',
-  'layout/forms';
-
-@import
-  'components/buttons',
-  'components/carousel',
-  'components/cover',
-  'components/dropdown';
-
-@import
-  'pages/home',
-  'pages/contact';
-
-@import
-  'themes/theme',
-  'themes/admin';
-*/

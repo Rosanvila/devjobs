@@ -224,6 +224,99 @@ p, li {
   color: var(--dark-grey);
 }
 
+.wrapper {
+  display: none;
+  margin: 2rem auto;
+  width: 141px;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+  background-color: var(--violet);
+  border-radius: 5px;
+}
+
+.wrapper-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 0.5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 50px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 10%;
+  }
+}
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 50px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow046 0.5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
 .container {
   margin-inline: auto;
   width: calc(100% - 1.5rem - 1.5rem);
@@ -597,13 +690,8 @@ a {
   width: 141px;
 }
 
-.load-more-api {
-  background-color: red;
-  font-weight: 700;
-  text-align: center;
-  border: none;
-  padding: 1rem;
-  text-transform: capitalize;
+.load-more-button-hidden {
+  display: none;
 }
 
 .research-form {
@@ -849,33 +937,5 @@ footer {
     width: calc(100% - 22.1875rem - 22.1875rem);
   }
 }
-/*
-Exemples de suite des imports
-@import
-  'vendors/bootstrap',
-  'vendors/jquery-ui';
-
-@import
-  'layout/navigation',
-  'layout/grid',
-  'layout/header',
-  'layout/footer',
-  'layout/sidebar',
-  'layout/forms';
-
-@import
-  'components/buttons',
-  'components/carousel',
-  'components/cover',
-  'components/dropdown';
-
-@import
-  'pages/home',
-  'pages/contact';
-
-@import
-  'themes/theme',
-  'themes/admin';
-*/
 
 /*# sourceMappingURL=style.css.map */
