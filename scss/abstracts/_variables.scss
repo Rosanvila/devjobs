@@ -48,6 +48,9 @@
   --txt-company: var(--dark-txt-company);
 }
 
+/*// Comme on peut le voir ci-dessus, j'utilise des variables CSS, et non des variables SCSS.
+// Je n'ai pas réussi à utiliser correctement les variables SCSS pour implémenter mon dark mode, donc je suis revenu aux variables CSS.
+*/
 
 $unnamed-font-family-kumbh-sans: Kumbh Sans;
 $unnamed-font-style-normal: normal;

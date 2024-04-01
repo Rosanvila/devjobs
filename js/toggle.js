@@ -17,10 +17,9 @@ togglePosition = () => {
     darkModeToggle.checked = true;
     darkModeOn();
   } else {
-    window.matchMedia("(prefers-color-scheme: dark)").matches && !setDarkMode ?
-    (darkModeToggle.checked = true, darkModeOn()) :
-    (darkModeToggle.checked = false, darkModeOff());
-  
+    window.matchMedia("(prefers-color-scheme: dark)").matches && !setDarkMode
+      ? ((darkModeToggle.checked = true), darkModeOn())
+      : ((darkModeToggle.checked = false), darkModeOff());
   }
 };
 togglePosition();

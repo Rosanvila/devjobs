@@ -17,6 +17,11 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("overlay-open");
 });
 
+//Ci-dessus, il aurait été possible de faire de l'injection avec javascript.
+//Par exemple, nous pourrions utiliser des balises modales ou <dialog> vides, puis injecter notre HTML dans ces balises vides lors du passage en format mobile. Toutefois, j'ai choisi de ne pas utiliser l'injection d'HTML/CSS. Au lieu de cela, j'ai préféré respecter la trinité et ne faire que des ajouts/suppressions de classes CSS déjà créées au préalable avec JavaScript.
+
+//J'aurais bien utilisé la <dialog> ici mais cela me posait des problèmes au passage au format tablette/desktop et ne voulant pas faire de l'injection HTML avec javascript, j'ai préféré repasser avec une <div> et faire le code ci-dessus.
+
 /*************RECUPERATION DES JOBS VIA TEMPLATE***********/
 /*********************************************************/
 
@@ -54,7 +59,6 @@ const jobsCard = (job) => {
   jobsContainer.appendChild(cardElement);
 };
 
-
 /**********RECUPERATION DE LA DATE DE PARUTION DE L'OFFRE*******/
 /*************************************************************/
 
@@ -79,3 +83,6 @@ timeFormat = (timestamp) => {
     return years + "y ago";
   }
 };
+//Ici une fonction qui va changer le mode d'affichage du timestamp via "postedAt".
+//Je retourne les cas selon plusieurs conditions afin d'afficher l'information de temps la plus correcte par rapport à la date de parution de l'offre.
+// Une autre façon de faire ici, aurait été un switch case. Car on regarde plusieurs cas en fonction d'une seule condition.
