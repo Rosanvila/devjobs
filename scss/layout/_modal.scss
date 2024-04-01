@@ -62,6 +62,10 @@
   background-color: var(--checkbox);
 }
 
+.checkmark:hover{
+  background-color: #5762e040;
+}
+
 .full-time input:checked ~ .checkmark {
   background-color: var(--violet);
 }

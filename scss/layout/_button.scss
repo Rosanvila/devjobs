@@ -61,7 +61,11 @@ a {
 
 .filter-button{
   width: auto;
-  background-color: var(--white);
+  background-color: transparent;
+}
+
+.filter-button:hover{
+  background-color: transparent;
 }
 
 .load-more-button{

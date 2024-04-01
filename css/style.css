@@ -13,12 +13,13 @@
   --anchor2hover: rgba(89, 100, 224, 0.35);
   --anchor2-dark: #ffffff1a;
   --anchor2-darkhover: #ffffff59;
+  --checkbox-color: #19212e1a;
   --txt: var(--very-dark-blue);
   --bg: var(--light-grey);
   --other: var(--white);
   --border: var(--light-grey);
   --filter: var(--dark-grey);
-  --checkbox: var(--light-grey);
+  --checkbox: var(--checkbox-color);
   --a: var(--anchor2);
   --a-hover:var(--anchor2hover);
   --txt-company: var(--violet);
@@ -607,6 +608,10 @@ input:checked + .slider:hover .slider-thumb {
   background-color: var(--checkbox);
 }
 
+.checkmark:hover {
+  background-color: rgba(87, 98, 224, 0.2509803922);
+}
+
 .full-time input:checked ~ .checkmark {
   background-color: var(--violet);
 }
@@ -738,7 +743,11 @@ a {
 
 .filter-button {
   width: auto;
-  background-color: var(--white);
+  background-color: transparent;
+}
+
+.filter-button:hover {
+  background-color: transparent;
 }
 
 .load-more-button {
@@ -764,10 +773,6 @@ a {
   background-color: var(--other);
   color: var(--txt);
   width: 100%;
-}
-
-.filter-button {
-  background-color: var(--other);
 }
 
 .research-content {

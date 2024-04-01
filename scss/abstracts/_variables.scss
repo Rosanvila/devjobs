@@ -12,13 +12,15 @@
   --anchor2hover: rgba(89, 100, 224, 0.35);
   --anchor2-dark: #ffffff1a;
   --anchor2-darkhover: #ffffff59;
+  --checkbox-color:  #19212e1a;
+
 
   --txt: var(--very-dark-blue);
   --bg: var(--light-grey);
   --other: var(--white);
   --border: var(--light-grey);
   --filter: var(--dark-grey);
-  --checkbox: var(--light-grey);
+  --checkbox: var(--checkbox-color);
   --a: var(--anchor2);
   --a-hover:var(--anchor2hover);
   --txt-company: var(--violet);
