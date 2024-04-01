@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Board</title>
+  <meta name="description" content="Job Board ECF front Robin">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="./img/favicon-32x32.png">
+</head>
+
+<body>
+  <div class="overlay" aria-hidden="true"></div>
+  <div class="skip-links">
+    <a href="#research-form">Skip to form</a>
+    <a href="#jobs">Skip to jobs content</a>
+  </div>
+  <header class="main-header">
+    <div class="container">
+      <div class="devjobs-theme">
+        <a href="index.html" aria-label="devjobs">
+          <img src="./img/logo.svg" alt="devjobs">
+        </a>
+        <div class="toggle-content">
+          <svg width="20" height="18.6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+            <path fill="#FFF"
+              d="M10 15.635c.33 0 .612.295.612.639v1.89c0 .344-.282.638-.612.638s-.612-.294-.612-.638v-1.89c0-.344.282-.639.612-.639zm-4.488-1.783c.27.262.27.68 0 .941L4.03 16.231a.698.698 0 0 1-.97 0 .649.649 0 0 1 0-.941l1.482-1.438c.27-.261.7-.261.97 0zm9.946 0 1.483 1.438c.27.261.27.68 0 .941a.698.698 0 0 1-.97 0l-1.483-1.438a.649.649 0 0 1 0-.94c.242-.262.674-.262.97 0zM10 4.552c1.396 0 2.685.525 3.598 1.4.913.85 1.504 2.05 1.504 3.35 0 1.3-.59 2.5-1.504 3.35a5.314 5.314 0 0 1-3.598 1.4c-1.396 0-2.685-.525-3.598-1.4-.913-.85-1.504-2.05-1.504-3.35 0-1.3.564-2.5 1.504-3.35A5.314 5.314 0 0 1 10 4.552zM2.607 8.906c.355 0 .658.274.658.594 0 .32-.303.594-.658.594H.658C.304 10.094 0 9.82 0 9.5c0-.32.304-.594.658-.594h1.95zm16.735 0c.354 0 .658.274.658.594 0 .32-.304.594-.658.594h-1.95c-.354 0-.657-.274-.657-.594 0-.32.303-.594.658-.594h1.949zM4.03 2.77l1.482 1.438c.27.261.27.68 0 .94-.242.262-.674.262-.97 0L3.059 3.71a.649.649 0 0 1 0-.941.699.699 0 0 1 .97 0zm12.91 0c.27.261.27.68 0 .941l-1.482 1.438a.698.698 0 0 1-.97 0 .649.649 0 0 1 0-.941L15.97 2.77a.699.699 0 0 1 .97 0zM10 .198c.33 0 .612.294.612.638v1.89c0 .344-.282.639-.612.639s-.612-.295-.612-.639V.836c0-.344.282-.638.612-.638z" />
+          </svg>
+          <label for="switch-theme-toggle" class="switch">
+            <input type="checkbox" name="toggle-switch" id="switch-theme-toggle" class="toggle" role="switch"
+              aria-label="toggle-switch-theme">
+            <span class="slider" aria-hidden="true">
+              <span class="slider-thumb"></span>
+            </span>
+          </label>
+          <svg width="12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+            <path fill="#FFF"
+              d="M6 0c1.516 0 2.925.566 3.978 1.523A3.979 3.979 0 0 0 8 1a4.014 4.014 0 0 0-2.821 1.179A3.927 3.927 0 0 0 4 5c0 1.095.463 2.105 1.179 2.821A3.927 3.927 0 0 0 8 9a4.034 4.034 0 0 0 3.974-3.548c.017.18.026.364.026.548a6.02 6.02 0 0 1-1.768 4.232A6.02 6.02 0 0 1 6 12a5.89 5.89 0 0 1-4.232-1.768A6.02 6.02 0 0 1 0 6a5.89 5.89 0 0 1 1.768-4.232A6.02 6.02 0 0 1 6 0z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+    <div class="container form-container">
+      <form class="research-form" id="research-form" aria-label="research-jobs-form">
+        <div class="research-content">
+          <img class="search-logo-large" src="/img/icon-search.svg" alt="">
+          <label id="reseach-title" class="reseach-title" for="by-title">
+            <input type="search" name="reseach-title" id="by-title"
+              placeholder="Filter by title, companies, expertise...">
+          </label>
+          <button type="button" id="filter-by-title-button" class="filter-button" aria-label="Filter">
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path class="filter" fill="#6E8098"
+                d="M19.108 0H.86a.86.86 0 0 0-.764.455.833.833 0 0 0 .068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 0 0 .248.594.865.865 0 0 0 .942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0 0 19.108 0z" />
+            </svg>
+          </button>
+          <button class="mobile-search-button" type="button">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="#ffffff"
+                d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z" />
+            </svg>
+          </button>
+        </div>
+        <div class="container modal" id="modal">
+          <label id="location-label" class="filter-location" for="location-input">
+            <img src="/img/icon-location.svg" alt="">
+            <input type="search" name="location" class="location-input" id="location-input"
+              placeholder="Filter by location...">
+          </label>
+          <label class="full-time" for="full-time">
+            <input type="checkbox" id="full-time">
+            <span class="checkmark"></span>
+            Full time only
+          </label>
+          <div class="modal-search-button">
+            <button type="submit" id="form-btn">search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <section class="jobs" id="jobs">
+      <h1>jobs</h1>
+      <div class="container jobs-container" id="jobs-container">
+        <template id="job-template">
+          <article class="job-card" id="job-card" aria-label="job-card">
+            <div class="job-logo" id="logo-back">
+              <img src="" alt="" id="logo" class="logo">
+            </div>
+            <div id="jod-description" class="job-description">
+              <p id="postedAt" class="postedAt"></p>
+              <span>&#183;</span>
+              <p id="contract" class="contract"></p>
+            </div>
+            <a href="" class="job-title" id="job-title">
+              <h2 class="h2 position" id="position"></h2>
+            </a>
+            <p id="company" class="company"></p>
+            <h3 class="h3 job-location" id="location"></h3>
+          </article>
+        </template>
+      </div>
+    </section>
+    <div>
+      <button type="button" aria-label="Load More Jobs" id="load-more-button" class="load-more-button">Load
+        More</button>
+        <div class="wrapper" id="wrapper">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+      </div>
+      <p id="load-ended" class="load-ended msg-style">No more jobs</p>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/toggle.js"></script>
+</body>
+
+</html>
