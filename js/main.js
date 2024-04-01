@@ -38,9 +38,38 @@ const byText = document.querySelector("#by-title");
 const researchBtn = document.querySelector("#form-btn");
 const byLocation = document.querySelector("#location-input");
 const fullTimeBox = document.querySelector("#full-time");
+const mobilSearchBtn = document.querySelector("#mobile-search-button");
 let isFullTime = fullTimeBox.checked ? 1 : 0;
 
 researchBtn.addEventListener("click", (ev) => {
+  loadEndedMsg.classList.remove("msg-style");
+  loadEndedMsg.classList.add("load-ended");
+  loadMoreBtn.classList.remove("load-ended");
+  mobileModal.classList.remove("modal-open");
+  overlay.classList.remove("overlay-open");
+
+  isFullTime = fullTimeBox.checked ? 1 : 0;
+  offSetJobs = 0;
+  ev.preventDefault();
+  jobsContainer.innerHTML = "";
+  isSearchInProgress = true;
+  try {
+    apiFiltedSearch(
+      byText.value.toLowerCase(),
+      byLocation.value.toLowerCase(),
+      isFullTime,
+      offSetJobs
+    );
+  } catch (error) {
+    window.alert(
+      "Erreur lors de la recherche: " +
+        error.message +
+        ", Veuillez contacter le support BlahCorp au plus vite !"
+    );
+  }
+});
+
+mobilSearchBtn.addEventListener("click", (ev) => {
   loadEndedMsg.classList.remove("msg-style");
   loadEndedMsg.classList.add("load-ended");
   loadMoreBtn.classList.remove("load-ended");
