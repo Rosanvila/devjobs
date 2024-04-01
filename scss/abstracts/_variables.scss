@@ -8,19 +8,30 @@
   --light-violet: #939bf4;
   --violet: #5964e0;
   --violet2: #5762e01a;
+  --anchor2:hsla(235, 69%, 61%, 0.10);
+  --anchor2hover: rgba(89, 100, 224, 0.35);
+  --anchor2-dark: #ffffff1a;
+  --anchor2-darkhover: #ffffff59;
 
   --txt: var(--very-dark-blue);
   --bg: var(--light-grey);
   --other: var(--white);
-  --border: var(--grey);
+  --border: var(--light-grey);
   --filter: var(--dark-grey);
-  
+  --checkbox: var(--light-grey);
+  --a: var(--anchor2);
+  --a-hover:var(--anchor2hover);
+  --txt-company: var(--violet);
 
   --dark-txt: var(--white);
   --dark-bg: var(--midnight);
   --dark-other: var(--very-dark-blue);
   --dark-border: var(--dark-grey);
   --dark-filter: var(--white);
+  --dark-checkbox: var(--dark-grey);
+  --dark-a: var(--anchor2-dark);
+  --dark-a-hover:var(--anchor2-darkhover);
+  --dark-txt-company: var(--white);
 }
 
 .darkmode {
@@ -29,7 +40,12 @@
   --other: var(--dark-other);
   --border: var(--dark-border);
   --filter: var(--dark-filter);
+  --checkbox: var(--dark-checkbox);
+  --a: var(--dark-a);
+  --a-hover: var(--dark-a-hover);
+  --txt-company: var(--dark-txt-company);
 }
+
 
 $unnamed-font-family-kumbh-sans: Kumbh Sans;
 $unnamed-font-style-normal: normal;

@@ -8,7 +8,7 @@ darkModeOn = () => {
 
 darkModeOff = () => {
   document.body.classList.remove("darkmode");
-  localStorage.removeItem("darkmode");
+  localStorage.setItem("darkmode", "off");
 };
 
 togglePosition = () => {
@@ -17,8 +17,13 @@ togglePosition = () => {
     darkModeToggle.checked = true;
     darkModeOn();
   } else {
-    darkModeToggle.checked = false;
-    darkModeOff();
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches && !setDarkMode) {
+      darkModeToggle.checked = true;
+      darkModeOn();
+    } else {
+      darkModeToggle.checked = false;
+      darkModeOff();
+    }
   }
 };
 togglePosition();

@@ -9,16 +9,28 @@
   --light-violet: #939bf4;
   --violet: #5964e0;
   --violet2: #5762e01a;
+  --anchor2:hsla(235, 69%, 61%, 0.10);
+  --anchor2hover: rgba(89, 100, 224, 0.35);
+  --anchor2-dark: #ffffff1a;
+  --anchor2-darkhover: #ffffff59;
   --txt: var(--very-dark-blue);
   --bg: var(--light-grey);
   --other: var(--white);
-  --border: var(--grey);
+  --border: var(--light-grey);
   --filter: var(--dark-grey);
+  --checkbox: var(--light-grey);
+  --a: var(--anchor2);
+  --a-hover:var(--anchor2hover);
+  --txt-company: var(--violet);
   --dark-txt: var(--white);
   --dark-bg: var(--midnight);
   --dark-other: var(--very-dark-blue);
   --dark-border: var(--dark-grey);
   --dark-filter: var(--white);
+  --dark-checkbox: var(--dark-grey);
+  --dark-a: var(--anchor2-dark);
+  --dark-a-hover:var(--anchor2-darkhover);
+  --dark-txt-company: var(--white);
 }
 
 .darkmode {
@@ -27,6 +39,10 @@
   --other: var(--dark-other);
   --border: var(--dark-border);
   --filter: var(--dark-filter);
+  --checkbox: var(--dark-checkbox);
+  --a: var(--dark-a);
+  --a-hover: var(--dark-a-hover);
+  --txt-company: var(--dark-txt-company);
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -322,6 +338,26 @@ p, li {
   width: calc(100% - 1.5rem - 1.5rem);
 }
 
+.skip-links a {
+  position: absolute;
+  top: -100vh;
+  left: 50%;
+  display: inline-block;
+  padding: 1rem;
+  color: var(--txt);
+  background-color: var(--bg);
+  transform: translateX(-50%);
+}
+
+.skip-links a:focus {
+  top: 0;
+}
+
+:focus-visible {
+  outline: 0.3rem solid var(--txt);
+  outline-offset: 0.5rem;
+}
+
 h1 {
   display: none;
 }
@@ -352,8 +388,8 @@ h1 {
   font-size: 17px;
   position: relative;
   display: inline-block;
-  width: 3.5em;
-  height: 2em;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .switch input {
@@ -375,16 +411,19 @@ h1 {
   border-radius: 30px;
 }
 
-.slider:before {
+.slider-thumb {
   position: absolute;
-  content: "";
-  height: 1.4em;
-  width: 1.4em;
+  height: 0.875rem;
+  width: 0.875rem;
   border-radius: 20px;
   left: 0.27em;
   bottom: 0.25em;
   background-color: var(--violet);
   transition: 0.4s;
+}
+
+.slider:hover .slider-thumb {
+  background-color: var(--light-violet);
 }
 
 input:checked + .slider {
@@ -396,9 +435,13 @@ input:focus + .slider {
   box-shadow: 0 0 1px var(--violet);
 }
 
-input:checked + .slider:before {
+input:checked + .slider .slider-thumb {
   transform: translateX(1.4em);
   background-color: var(--violet);
+}
+
+input:checked + .slider:hover .slider-thumb {
+  background-color: var(--light-violet);
 }
 
 @media screen and (min-width: 48em) {
@@ -561,11 +604,11 @@ input:checked + .slider:before {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 0.1875rem;
-  background-color: #ccc;
+  background-color: var(--checkbox);
 }
 
 .full-time input:checked ~ .checkmark {
-  background-color: #2196f3;
+  background-color: var(--violet);
 }
 
 .checkmark:after {
@@ -579,10 +622,10 @@ input:checked + .slider:before {
 }
 
 .full-time .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
+  left: 8px;
+  top: 2px;
+  width: 8px;
+  height: 15px;
   border: solid white;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
@@ -641,6 +684,11 @@ button {
   width: 100%;
 }
 
+button:hover,
+button:focus {
+  background-color: var(--light-violet);
+}
+
 a {
   text-decoration: none;
   text-transform: capitalize;
@@ -659,17 +707,25 @@ a {
   padding: 1rem;
 }
 
+.anchor-button:hover {
+  background-color: var(--light-violet);
+}
+
 .anchor-button-2 {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  background-color: var(--violet2);
-  color: var(--violet);
+  background-color: var(--a);
+  color: var(--txt-company);
   font-weight: 700;
   text-align: center;
   border: none;
   padding: 1rem;
+}
+
+.anchor-button-2:hover {
+  background-color: var(--a-hover);
 }
 
 .mobile-search-button {
@@ -787,7 +843,7 @@ a {
   display: grid;
   justify-items: center;
   border-radius: 0.375rem;
-  margin-block-end: 2rem;
+  padding-block-end: 2rem;
   background-color: var(--other);
   transform: translateY(-25%);
 }
@@ -805,6 +861,8 @@ a {
 
 .job-details-logo img {
   border-radius: 15px;
+  padding-block: 0.75rem;
+  padding-inline: 0.6rem;
 }
 
 .website-id {
@@ -892,6 +950,7 @@ footer {
   .job-details-card {
     grid-template-columns: 8.75rem 1fr;
     border-top-left-radius: 0;
+    padding-block-end: 0;
   }
   .job-site {
     display: flex;

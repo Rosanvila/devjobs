@@ -3,7 +3,27 @@
   width: calc(100% - 1.5rem - 1.5rem);
 }
 
-h1{
+.skip-links a {
+  position: absolute;
+  top: -100vh;
+  left: 50%;
+  display: inline-block;
+  padding: 1rem;
+  color: var(--txt);
+  background-color: var(--bg);
+  transform: translateX(-50%);
+}
+
+.skip-links a:focus {
+  top: 0;
+}
+
+:focus-visible {
+  outline: 0.3rem solid var(--txt);
+  outline-offset: 0.5rem;
+}
+
+h1 {
   display: none;
 }
 
@@ -31,8 +51,8 @@ h1{
   font-size: 17px;
   position: relative;
   display: inline-block;
-  width: 3.5em;
-  height: 2em;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .switch input {
@@ -54,16 +74,19 @@ h1{
   border-radius: 30px;
 }
 
-.slider:before {
+.slider-thumb {
   position: absolute;
-  content: "";
-  height: 1.4em;
-  width: 1.4em;
+  height: .875rem;
+  width: .875rem;
   border-radius: 20px;
   left: 0.27em;
   bottom: 0.25em;
   background-color: var(--violet);
   transition: 0.4s;
+}
+
+.slider:hover .slider-thumb {
+  background-color: var(--light-violet);
 }
 
 input:checked + .slider {
@@ -75,10 +98,15 @@ input:focus + .slider {
   box-shadow: 0 0 1px var(--violet);
 }
 
-input:checked + .slider:before {
+input:checked + .slider .slider-thumb {
   transform: translateX(1.4em);
   background-color: var(--violet);
 }
+
+input:checked + .slider:hover .slider-thumb {
+  background-color: var(--light-violet);
+}
+
 
 @include mq(md) {
   .container {
@@ -92,13 +120,13 @@ input:checked + .slider:before {
   }
 }
 
-@include mq(xl){
-.main-header{
-  border-bottom-left-radius: 6rem;
-}
+@include mq(xl) {
+  .main-header {
+    border-bottom-left-radius: 6rem;
+  }
 }
 
-@include mq(xxl){
+@include mq(xxl) {
   .container {
     margin-inline: auto;
     width: calc(100% - 10.3125rem - 10.3125rem);

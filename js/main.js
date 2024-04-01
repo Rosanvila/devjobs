@@ -23,7 +23,11 @@ loadMoreBtn.addEventListener("click", () => {
   try {
     loadMoreJobs();
   } catch (error) {
-    window.alert("Erreur lors du chargement des jobs supplémentaires: " + error.message + ", Veuillez contacter le support BlahCorp au plus vite !");
+    window.alert(
+      "Erreur lors du chargement des jobs supplémentaires: " +
+        error.message +
+        ", Veuillez contacter le support BlahCorp au plus vite !"
+    );
   }
 });
 
@@ -48,10 +52,18 @@ researchBtn.addEventListener("click", (ev) => {
   ev.preventDefault();
   jobsContainer.innerHTML = "";
   isSearchInProgress = true;
-  apiFiltedSearch(
-    byText.value.toLowerCase(),
-    byLocation.value.toLowerCase(),
-    isFullTime,
-    offSetJobs
-  );
+  try {
+    apiFiltedSearch(
+      byText.value.toLowerCase(),
+      byLocation.value.toLowerCase(),
+      isFullTime,
+      offSetJobs
+    );
+  } catch (error) {
+    window.alert(
+      "Erreur lors de la recherche: " +
+        error.message +
+        ", Veuillez contacter le support BlahCorp au plus vite !"
+    );
+  }
 });

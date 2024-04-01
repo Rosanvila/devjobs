@@ -12,7 +12,7 @@ font-size: clamp(1.25rem, 0.83rem + 1.865vw, 1.75rem);
   display: grid;
   justify-items: center;
   border-radius: 0.375rem;
-  margin-block-end: 2rem;
+  padding-block-end: 2rem;
   background-color: var(--other);
   transform: translateY(-25%);
 }
@@ -30,6 +30,8 @@ font-size: clamp(1.25rem, 0.83rem + 1.865vw, 1.75rem);
 
 .job-details-logo img {
   border-radius: 15px;
+  padding-block: 0.75rem;
+  padding-inline: 0.6rem;
 }
 
 .website-id {
@@ -117,6 +119,7 @@ footer {
   .job-details-card {
     grid-template-columns: 8.75rem 1fr;
     border-top-left-radius: 0;
+    padding-block-end: 0;
   }
 
   .job-site {
