@@ -9,7 +9,7 @@ apiGetAllCard = async () => {
     loaderBtn.classList.add("wrapper-loading");
 
     const response = await fetch(
-      `https://ecf-dwwm.cefim-formation.org/api/jobs?offset=${offSetJobs}`
+      `https://link.org/api/jobs?offset=${offSetJobs}`
     );
 
     if (!response.ok) {
@@ -53,7 +53,7 @@ apiFiltedSearch = async (textValue, locationValue, fullTime) => {
     loadMoreBtn.classList.add("load-more-button-hidden");
     loaderBtn.classList.add("wrapper-loading");
     const response = await fetch(
-      `https://ecf-dwwm.cefim-formation.org/api/jobs/search?text=${textValue}&location=${locationValue}&fulltime=${fullTime}&offset=${offSetJobs}`
+      `https://link.org/api/jobs/search?text=${textValue}&location=${locationValue}&fulltime=${fullTime}&offset=${offSetJobs}`
     );
 
     if (!response.ok) {

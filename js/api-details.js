@@ -6,7 +6,7 @@ apiGoDetails = async (jobId) => {
     const loaderBtn = document.querySelector("#wrapper");
     loaderBtn.classList.add("wrapper-loading");
     const response = await fetch(
-      `https://ecf-dwwm.cefim-formation.org/api/job/${jobId}`
+      `https://link.org/api/job/${jobId}`
     );
 
     if (!response.ok) {
