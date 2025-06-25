@@ -41,7 +41,7 @@ createCardElement = (job) => {
   jobTitleLink.href = `job-detail.html?id=${job.id}`;
 
   const jobLogo = clonedCard.querySelector(".logo");
-  jobLogo.src = "https://ecf-dwwm.cefim-formation.org" + job.logo;
+  jobLogo.src = job.logo;
   jobLogo.style.backgroundColor = job.logoBackground;
 
   jobCompany.textContent = `${job.company}`;

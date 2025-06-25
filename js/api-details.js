@@ -4,9 +4,12 @@
 apiGoDetails = async (jobId) => {
   try {
     const loaderBtn = document.querySelector("#wrapper");
-    loaderBtn.classList.add("wrapper-loading");
+    if (loaderBtn) {
+      loaderBtn.classList.add("wrapper-loading");
+    }
+    
     const response = await fetch(
-      `https://ecf-dwwm.cefim-formation.org/api/job/${jobId}`
+      `http://localhost:8000/api/job/${jobId}`
     );
 
     if (!response.ok) {
@@ -17,12 +20,25 @@ apiGoDetails = async (jobId) => {
 
     jobCompanyDetails(data);
     console.log("Les détails de l'emploi ont été récupérés avec succès");
-    loaderBtn.classList.remove("wrapper-loading");
+    
+    if (loaderBtn) {
+      loaderBtn.classList.remove("wrapper-loading");
+    }
 
   } catch (error) {
+    console.error("Erreur lors de la récupération des détails:", error);
     window.alert("Erreur de requête: 404 (NOT FOUND)");
-    loaderBtn.classList.remove("wrapper-loading");
+    
+    const loaderBtn = document.querySelector("#wrapper");
+    if (loaderBtn) {
+      loaderBtn.classList.remove("wrapper-loading");
+    }
   }
 };
 
-apiGoDetails(jobId);
+// Appel de la fonction si un jobId est présent dans l'URL
+if (jobId) {
+  apiGoDetails(jobId);
+} else {
+  console.error("Aucun ID d'offre d'emploi trouvé dans l'URL");
+}

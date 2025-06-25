@@ -16,7 +16,7 @@ createDetailsJob = (data) => {
   const jobCompanyDotCom = clonedCompany.querySelector("#company-dotocm");
   const companySiteBtn = clonedCompany.querySelector("#company-website");
   const jobLogo = clonedCompany.querySelector("#logo");
-  jobLogo.src = "https://ecf-dwwm.cefim-formation.org" + data.logo;
+  jobLogo.src = data.logo;
   jobLogo.style.backgroundColor = data.logoBackground;
   jobCompany.textContent = data.company;
   jobCompanyDotCom.textContent = data.company + ".com";
